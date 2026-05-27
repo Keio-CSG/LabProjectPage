@@ -1,0 +1,106 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021810"/>
+      <stop offset="100%" stop-color="#042a1a"/>
+    </linearGradient>
+    <radialGradient id="beamGlow" cx="15%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="markerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <ellipse cx="120" cy="225" rx="180" ry="200" fill="url(#beamGlow)"/>
+
+  <!-- Ground line -->
+  <line x1="0" y1="340" x2="800" y2="340" stroke="#1a3d2b" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Construction vehicle (left side) -->
+  <g transform="translate(60, 240)">
+    <!-- Machine body -->
+    <rect x="0" y="40" width="100" height="55" rx="4" fill="#1a3d2b" stroke="#34d399" stroke-width="1.5" opacity="0.9"/>
+    <!-- Cabin -->
+    <rect x="10" y="20" width="45" height="38" rx="3" fill="#0d2b1e" stroke="#34d399" stroke-width="1.2" opacity="0.85"/>
+    <!-- Window -->
+    <rect x="17" y="26" width="30" height="22" rx="2" fill="#064e3b" opacity="0.7"/>
+    <!-- Tracks -->
+    <rect x="-5" y="90" width="110" height="18" rx="6" fill="#0d2b1e" stroke="#34d399" stroke-width="1" opacity="0.8"/>
+    <!-- Track wheels -->
+    <circle cx="10" cy="99" r="7" fill="#1a3d2b" stroke="#34d399" stroke-width="1"/>
+    <circle cx="35" cy="99" r="7" fill="#1a3d2b" stroke="#34d399" stroke-width="1"/>
+    <circle cx="60" cy="99" r="7" fill="#1a3d2b" stroke="#34d399" stroke-width="1"/>
+    <circle cx="85" cy="99" r="7" fill="#1a3d2b" stroke="#34d399" stroke-width="1"/>
+    <!-- LiDAR sensor on top -->
+    <circle cx="55" cy="17" r="8" fill="#065f46" stroke="#34d399" stroke-width="1.8"/>
+    <circle cx="55" cy="17" r="4" fill="#34d399" opacity="0.9"/>
+  </g>
+
+  <!-- LiDAR scan beams (fan from vehicle LiDAR) -->
+  <!-- Main beam toward beacon -->
+  <line x1="115" y1="257" x2="680" y2="235" stroke="#34d399" stroke-width="2.5" opacity="0.85"/>
+  <!-- Fan beams -->
+  <line x1="115" y1="257" x2="700" y2="180" stroke="#34d399" stroke-width="0.8" opacity="0.3"/>
+  <line x1="115" y1="257" x2="700" y2="210" stroke="#34d399" stroke-width="0.8" opacity="0.4"/>
+  <line x1="115" y1="257" x2="700" y2="260" stroke="#34d399" stroke-width="0.8" opacity="0.4"/>
+  <line x1="115" y1="257" x2="700" y2="300" stroke="#34d399" stroke-width="0.8" opacity="0.3"/>
+  <line x1="115" y1="257" x2="700" y2="330" stroke="#34d399" stroke-width="0.6" opacity="0.2"/>
+
+  <!-- 309m distance arrow -->
+  <line x1="115" y1="365" x2="680" y2="365" stroke="#34d399" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="115,360 105,365 115,370" fill="#34d399" opacity="0.7"/>
+  <polygon points="680,360 690,365 680,370" fill="#34d399" opacity="0.7"/>
+  <rect x="340" y="357" width="90" height="20" rx="4" fill="#021810"/>
+  <text x="385" y="372" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">309 m</text>
+
+  <!-- PDLC Beacon marker (right side) -->
+  <g transform="translate(665, 130)">
+    <!-- Pole -->
+    <rect x="13" y="90" width="6" height="120" rx="2" fill="#065f46" stroke="#34d399" stroke-width="1" opacity="0.8"/>
+    <!-- PDLC panel -->
+    <rect x="0" y="10" width="32" height="80" rx="3" fill="#064e3b" stroke="#34d399" stroke-width="2" opacity="0.9"/>
+    <!-- Glow effect on panel -->
+    <ellipse cx="16" cy="50" rx="12" ry="35" fill="url(#markerGlow)"/>
+    <!-- Temporal pattern stripes (PDLC switching) -->
+    <rect x="4" y="15" width="24" height="10" rx="1" fill="#34d399" opacity="0.9"/>
+    <rect x="4" y="30" width="24" height="10" rx="1" fill="#064e3b" opacity="0.5" stroke="#34d399" stroke-width="0.5"/>
+    <rect x="4" y="45" width="24" height="10" rx="1" fill="#34d399" opacity="0.85"/>
+    <rect x="4" y="60" width="24" height="10" rx="1" fill="#064e3b" opacity="0.5" stroke="#34d399" stroke-width="0.5"/>
+    <rect x="4" y="75" width="24" height="10" rx="1" fill="#34d399" opacity="0.9"/>
+    <!-- Reflection pulse dot -->
+    <circle cx="16" cy="50" r="5" fill="#6ee7b7" opacity="0.95"/>
+  </g>
+
+  <!-- Single point return indicator -->
+  <circle cx="683" cy="235" r="6" fill="#6ee7b7" opacity="0.95"/>
+  <circle cx="683" cy="235" r="12" fill="none" stroke="#34d399" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="683" cy="235" r="20" fill="none" stroke="#34d399" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- ID bits annotation -->
+  <rect x="560" y="90" width="170" height="65" rx="8" fill="#021a10" stroke="#34d399" stroke-width="1.2" opacity="0.9"/>
+  <text x="645" y="113" font-family="monospace" font-size="11" font-weight="700" fill="#6ee7b7" text-anchor="middle">Temporal Pattern ID</text>
+  <text x="645" y="132" font-family="monospace" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">1 0 1 1 0 1 0 0</text>
+  <text x="645" y="148" font-family="system-ui,sans-serif" font-size="10" fill="#6ee7b7" text-anchor="middle" opacity="0.8">PDLC on/off switching</text>
+
+  <!-- Single return badge -->
+  <rect x="560" y="165" width="170" height="40" rx="6" fill="#065f46" stroke="#34d399" stroke-width="1.2" opacity="0.9"/>
+  <text x="645" y="183" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#a7f3d0" text-anchor="middle">Single Laser Return</text>
+  <text x="645" y="198" font-family="system-ui,sans-serif" font-size="10" fill="#6ee7b7" text-anchor="middle" opacity="0.85">No pattern matching needed</text>
+
+  <!-- Key metric -->
+  <rect x="200" y="90" width="185" height="60" rx="8" fill="#021a10" stroke="#10b981" stroke-width="1.5" opacity="0.9"/>
+  <text x="292" y="114" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#6ee7b7" text-anchor="middle">World Record Range</text>
+  <text x="292" y="138" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#34d399" text-anchor="middle">309 m · 19× prior</text>
+
+  <!-- GPS-free label -->
+  <rect x="200" y="162" width="185" height="38" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="1" opacity="0.85"/>
+  <text x="292" y="180" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#a7f3d0" text-anchor="middle">GPS-Free Localization</text>
+  <text x="292" y="195" font-family="system-ui,sans-serif" font-size="10" fill="#6ee7b7" text-anchor="middle" opacity="0.8">Avg. error &lt; 0.14 m</text>
+
+  <!-- Title -->
+  <text x="400" y="398" font-family="system-ui,-apple-system,sans-serif" font-size="36" font-weight="800" fill="white" text-anchor="middle" opacity="0.95">LiDAR Beacon</text>
+  <text x="400" y="430" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#34d399" text-anchor="middle" letter-spacing="2">IEEE Sensors Journal 2026</text>
+</svg>

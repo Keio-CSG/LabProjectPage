@@ -21,7 +21,9 @@ tags:
   - LiDAR
   - Security
 links:
-  project: https://sites.google.com/keio.jp/keio-csg/projects
+  project: https://sites.google.com/keio.jp/keio-csg/projects/new-gen-lidar-sec
+  paper: https://www.ndss-symposium.org/ndss-paper/lidar-spoofing-meets-the-new-gen-capability-improvements-broken-assumptions-and-new-attack-strategies/
+  press: https://www.jst.go.jp/pr/announce/20240213-3/index.html
 ---
 
 Investigates LiDAR spoofing attacks against next-generation LiDAR sensors,

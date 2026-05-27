@@ -229,6 +229,7 @@ header {
 .badge-icra, .badge-iros, .badge-ral    { background: #059669; }
 .badge-ndss, .badge-sp, .badge-ccs      { background: #dc2626; }
 .badge-mmsports                          { background: #d97706; }
+.badge-sensorsj                          { background: #0d9488; }
 
 /* Status badges */
 .badge-status {
