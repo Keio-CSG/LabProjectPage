@@ -5,6 +5,7 @@ venue: MMSports
 year: 2025
 status: published
 section: Sensor
+description_ja: "LiDARセンシングを用いたバスケットボール選手の3D追跡システム。試合中の選手とボールをリアルタイムで精密に3次元位置推定し、スポーツアナリティクスのための高密度空間データを取得する。コーチングや戦術分析への実用的活用を見据えたシステム構築を行った。"
 teaser: assets/images/basket-lidar-teaser.svg
 authors:
   - name: "R. Hayashi"
