@@ -5,6 +5,7 @@ venue: NDSS
 year: 2024
 status: published
 section: Sensor
+description_ja: "次世代LiDARセンサに対するスプーフィング攻撃の能力向上と新たな攻撃戦略を明らかにした研究。従来の安全仮定が成立しなくなることを示し、既存の対策を無効化する手法を複数提案している。次世代センサのセキュリティ設計指針を与える重要な知見を含む。"
 teaser: assets/images/lidar-newgen-teaser.svg
 authors:
   - name: "T. Sato"
