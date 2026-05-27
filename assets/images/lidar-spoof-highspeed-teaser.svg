@@ -1,7 +1,55 @@
 <svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="450" fill="#c81e1e"/>
-  <text x="400" y="190" font-family="sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">LiDAR Spoofing</text>
-  <text x="400" y="245" font-family="sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">High Speed &amp; Long Distance</text>
-  <text x="400" y="305" font-family="sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">NDSS 2025</text>
-  <text x="400" y="350" font-family="sans-serif" font-size="18" fill="rgba(255,255,255,0.6)" text-anchor="middle">LiDAR · Security</text>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a0306"/>
+      <stop offset="100%" stop-color="#3d0a10"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="55%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sensor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f87171" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f87171" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <ellipse cx="440" cy="225" rx="320" ry="220" fill="url(#glow)"/>
+  <!-- Speed lines (motion blur) -->
+  <line x1="0"  y1="160" x2="350" y2="190" stroke="#7f1d1d" stroke-width="18" opacity="0.35" stroke-linecap="round"/>
+  <line x1="0"  y1="185" x2="340" y2="210" stroke="#7f1d1d" stroke-width="12" opacity="0.28" stroke-linecap="round"/>
+  <line x1="0"  y1="206" x2="345" y2="225" stroke="#991b1b" stroke-width="8"  opacity="0.22" stroke-linecap="round"/>
+  <line x1="0"  y1="240" x2="350" y2="242" stroke="#7f1d1d" stroke-width="12" opacity="0.28" stroke-linecap="round"/>
+  <line x1="0"  y1="265" x2="345" y2="258" stroke="#7f1d1d" stroke-width="8"  opacity="0.2"  stroke-linecap="round"/>
+  <!-- Vehicle body -->
+  <rect x="340" y="188" width="110" height="60" rx="8" fill="#991b1b" opacity="0.85"/>
+  <rect x="358" y="168" width="74" height="28" rx="6" fill="#7f1d1d" opacity="0.85"/>
+  <circle cx="360" cy="252" r="14" fill="#111" opacity="0.95"/><circle cx="360" cy="252" r="7" fill="#374151" opacity="0.7"/>
+  <circle cx="432" cy="252" r="14" fill="#111" opacity="0.95"/><circle cx="432" cy="252" r="7" fill="#374151" opacity="0.7"/>
+  <!-- LiDAR sensor on roof -->
+  <circle cx="395" cy="166" r="8" fill="#fca5a5" opacity="0.9"/>
+  <!-- LiDAR scan arcs -->
+  <circle cx="395" cy="166" r="60"  fill="none" stroke="#fca5a5" stroke-width="1.2" opacity="0.35" stroke-dasharray="4 6"/>
+  <circle cx="395" cy="166" r="100" fill="none" stroke="#fca5a5" stroke-width="1"   opacity="0.25" stroke-dasharray="4 8"/>
+  <circle cx="395" cy="166" r="145" fill="none" stroke="#fca5a5" stroke-width="0.8" opacity="0.18" stroke-dasharray="4 10"/>
+  <!-- Attacker (long distance) -->
+  <rect x="660" y="160" width="90" height="50" rx="6" fill="#1e1a1a" opacity="0.9"/>
+  <rect x="670" y="148" width="70" height="16" rx="3" fill="#2d2020" opacity="0.9"/>
+  <text x="705" y="190" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#f87171" text-anchor="middle">ATTACKER</text>
+  <!-- Spoof beam -->
+  <line x1="660" y1="178" x2="395" y2="166" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="12 6" opacity="0.8"/>
+  <!-- Fake ghost points near vehicle -->
+  <circle cx="500" cy="200" r="4"   fill="#fbbf24" opacity="0.75"/>
+  <circle cx="518" cy="215" r="3"   fill="#fbbf24" opacity="0.65"/>
+  <circle cx="535" cy="195" r="4.5" fill="#fbbf24" opacity="0.8"/>
+  <circle cx="552" cy="210" r="3"   fill="#fbbf24" opacity="0.7"/>
+  <circle cx="510" cy="230" r="3.5" fill="#fbbf24" opacity="0.6"/>
+  <!-- Distance label -->
+  <line x1="395" y1="370" x2="660" y2="370" stroke="#f87171" stroke-width="1.5" opacity="0.6"/>
+  <line x1="395" y1="364" x2="395" y2="376" stroke="#f87171" stroke-width="1.5" opacity="0.6"/>
+  <line x1="660" y1="364" x2="660" y2="376" stroke="#f87171" stroke-width="1.5" opacity="0.6"/>
+  <text x="527" y="365" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#fca5a5" text-anchor="middle">Long Distance Attack</text>
+  <!-- Title -->
+  <text x="400" y="408" font-family="system-ui,-apple-system,sans-serif" font-size="36" font-weight="800" fill="white" text-anchor="middle" opacity="0.95">LiDAR Spoofing · High Speed</text>
+  <text x="400" y="435" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="#fca5a5" text-anchor="middle" letter-spacing="2">NDSS 2025</text>
 </svg>

@@ -3,7 +3,6 @@ const matter = require('gray-matter');
 const { marked } = require('marked');
 const { globSync } = require('glob');
 
-// Inline SVG icons
 const ICONS = {
   paper: `<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8.5 15.5h-1v-4h1.3c.8 0 1.2.5 1.2 1.1 0 .7-.5 1.1-1.3 1.1H8.5v1.8zm0-2.6h.2c.3 0 .5-.1.5-.4 0-.3-.2-.4-.5-.4H8.5v.8zm3.5 2.6h-1v-4h1c1.1 0 1.8.7 1.8 2s-.7 2-1.8 2zm0-3.2h-.1v2.4h.1c.5 0 .9-.3.9-1.2 0-.9-.4-1.2-.9-1.2zm3.5 3.2h-1v-4h2.3v.8H15v.9h1.2v.7H15v1.6z"/></svg>`,
   arxiv: `<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><text x="1" y="17" font-family="serif" font-size="13" font-weight="bold" fill="white">ar</text></svg>`,
@@ -14,39 +13,17 @@ const ICONS = {
   video: `<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>`,
 };
 
-const LINK_LABELS = {
-  paper: 'Paper',
-  arxiv: 'arXiv',
-  code: 'Code',
-  project: 'Project Page',
-  slides: 'Slides',
-  poster: 'Poster',
-  video: 'Video',
-};
-
-const STATUS_LABELS = {
-  published: 'Published',
-  accepted: 'Accepted',
-  'under-review': 'Under Review',
-  preprint: 'Preprint',
-};
-
-// Section display order
+const LINK_LABELS = { paper: 'Paper', arxiv: 'arXiv', code: 'Code', project: 'Project Page', slides: 'Slides', poster: 'Poster', video: 'Video' };
+const STATUS_LABELS = { published: 'Published', accepted: 'Accepted', 'under-review': 'Under Review', preprint: 'Preprint' };
 const SECTION_ORDER = ['Sensor', 'Circuit'];
 
 function escapeHtml(str) {
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
 function renderAuthors(authors) {
   if (!authors || !Array.isArray(authors)) return '';
-  return authors
-    .map(a => a.me ? `<strong>${escapeHtml(a.name)}</strong>` : escapeHtml(a.name))
-    .join(', ');
+  return authors.map(a => a.me ? `<strong>${escapeHtml(a.name)}</strong>` : escapeHtml(a.name)).join(', ');
 }
 
 function renderTags(tags) {
@@ -62,8 +39,7 @@ function renderLinks(links) {
       const label = LINK_LABELS[type];
       const icon = ICONS[type] || '';
       return `<a href="${escapeHtml(url)}" class="link-badge link-${escapeHtml(type)}" target="_blank" rel="noopener" aria-label="${escapeHtml(label)}"><span class="badge-icon">${icon}</span><span class="badge-label">${escapeHtml(label)}</span></a>`;
-    })
-    .join('');
+    }).join('');
 }
 
 function renderDescription(content) {
@@ -88,7 +64,7 @@ function buildCard(data, content) {
   const descHtml = renderDescription(content);
   const descJa = data.description_ja ? `<p class="card-description-ja">${escapeHtml(data.description_ja)}</p>` : '';
 
-  return `<article class="project-card" data-tags="${escapeHtml(tagsStr)}">
+  return `<article class="project-card" data-tags="${escapeHtml(tagsStr)}" data-venue="${escapeHtml(venue)}">
   <div class="card-teaser">
     <img src="${escapeHtml(teaser)}" alt="${escapeHtml(title)} teaser" loading="lazy" />
   </div>
@@ -107,16 +83,36 @@ function buildCard(data, content) {
 </article>`;
 }
 
+function buildVenueButtons(projects) {
+  // Collect venues in section order to group them naturally
+  const seen = new Set();
+  const venues = [];
+  for (const secName of [...SECTION_ORDER, '__rest__']) {
+    for (const p of projects) {
+      const v = p.data.venue;
+      if (!v || seen.has(v)) continue;
+      const sec = p.data.section;
+      if (secName === '__rest__' ? !SECTION_ORDER.includes(sec) : sec === secName) {
+        seen.add(v);
+        venues.push(v);
+      }
+    }
+  }
+  const btns = [`<button class="filter-btn active" data-venue="all">All</button>`];
+  for (const v of venues) {
+    btns.push(`<button class="filter-btn" data-venue="${escapeHtml(v)}">${escapeHtml(v)}</button>`);
+  }
+  return btns.join('\n    ');
+}
+
 function main() {
   const files = globSync('projects/*.md');
-
   const projects = files.map(file => {
     const raw = fs.readFileSync(file, 'utf8');
     const { data, content } = matter(raw);
     return { data, content };
   });
 
-  // Sort within each section: by order ascending (if set), then year descending
   projects.sort((a, b) => {
     const ao = a.data.order != null ? a.data.order : Infinity;
     const bo = b.data.order != null ? b.data.order : Infinity;
@@ -137,7 +133,6 @@ function main() {
     }
   }
 
-  // Build HTML: sections in defined order, then ungrouped
   let cardsHtml = '';
   const orderedSections = SECTION_ORDER.filter(s => sections[s]);
   for (const secName of orderedSections) {
@@ -149,7 +144,6 @@ ${cards}
   </div>
 </section>\n`;
   }
-  // Any sections not in SECTION_ORDER
   for (const secName of Object.keys(sections).filter(s => !SECTION_ORDER.includes(s))) {
     const cards = sections[secName].map(p => buildCard(p.data, p.content)).join('\n');
     cardsHtml += `<section class="project-section" data-section="${escapeHtml(secName)}">
@@ -164,8 +158,11 @@ ${cards}
     cardsHtml += `<div class="section-grid">\n${cards}\n</div>\n`;
   }
 
-  const template = fs.readFileSync('template.html', 'utf8');
-  const output = template.replace('<!--CARDS-->', cardsHtml);
+  const venueButtons = buildVenueButtons(projects);
+
+  let output = fs.readFileSync('template.html', 'utf8');
+  output = output.replace('<!--CARDS-->', cardsHtml);
+  output = output.replace('<!--VENUE-FILTERS-->', venueButtons);
 
   fs.writeFileSync('index.html', output, 'utf8');
   console.log(`Built index.html with ${projects.length} projects in ${orderedSections.length} sections.`);

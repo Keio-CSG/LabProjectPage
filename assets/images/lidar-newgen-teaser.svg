@@ -1,6 +1,55 @@
 <svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="450" fill="#c81e1e"/>
-  <text x="400" y="190" font-family="sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">LiDAR New-Gen Spoofing</text>
-  <text x="400" y="260" font-family="sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">NDSS 2024</text>
-  <text x="400" y="310" font-family="sans-serif" font-size="18" fill="rgba(255,255,255,0.6)" text-anchor="middle">LiDAR · Security</text>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a0000"/>
+      <stop offset="100%" stop-color="#3d0808"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#dc2626" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#dc2626" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <ellipse cx="400" cy="225" rx="340" ry="230" fill="url(#glow)"/>
+  <!-- Hexagonal grid (next-gen LiDAR channel array) -->
+  <!-- Row 1 -->
+  <polygon points="185,108 215,108 230,133 215,158 185,158 170,133" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.55"/>
+  <polygon points="235,108 265,108 280,133 265,158 235,158 220,133" fill="#7f1d1d" stroke="#dc2626" stroke-width="1.2" opacity="0.65"/>
+  <polygon points="285,108 315,108 330,133 315,158 285,158 270,133" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.55"/>
+  <polygon points="335,108 365,108 380,133 365,158 335,158 320,133" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.55"/>
+  <polygon points="385,108 415,108 430,133 415,158 385,158 370,133" fill="#7f1d1d" stroke="#dc2626" stroke-width="1.2" opacity="0.65"/>
+  <polygon points="435,108 465,108 480,133 465,158 435,158 420,133" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.55"/>
+  <polygon points="485,108 515,108 530,133 515,158 485,158 470,133" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.55"/>
+  <polygon points="535,108 565,108 580,133 565,158 535,158 520,133" fill="#7f1d1d" stroke="#dc2626" stroke-width="1.2" opacity="0.65"/>
+  <!-- Row 2 (offset) -->
+  <polygon points="160,158 190,158 205,183 190,208 160,208 145,183" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="210,158 240,158 255,183 240,208 210,208 195,183" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="260,158 290,158 305,183 290,208 260,208 245,183" fill="#991b1b" stroke="#ef4444" stroke-width="1.5" opacity="0.75"/>
+  <polygon points="310,158 340,158 355,183 340,208 310,208 295,183" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="360,158 390,158 405,183 390,208 360,208 345,183" fill="#991b1b" stroke="#ef4444" stroke-width="1.5" opacity="0.75"/>
+  <polygon points="410,158 440,158 455,183 440,208 410,208 395,183" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="460,158 490,158 505,183 490,208 460,208 445,183" fill="#7f1d1d" stroke="#dc2626" stroke-width="1.2" opacity="0.6"/>
+  <polygon points="510,158 540,158 555,183 540,208 510,208 495,183" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="560,158 590,158 605,183 590,208 560,208 545,183" fill="#991b1b" stroke="#ef4444" stroke-width="1.5" opacity="0.75"/>
+  <!-- Row 3 (same as row 1) -->
+  <polygon points="185,208 215,208 230,233 215,258 185,258 170,233" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.45"/>
+  <polygon points="235,208 265,208 280,233 265,258 235,258 220,233" fill="#7f1d1d" stroke="#dc2626" stroke-width="1.2" opacity="0.6"/>
+  <polygon points="285,208 315,208 330,233 315,258 285,258 270,233" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.45"/>
+  <polygon points="335,208 365,208 380,233 365,258 335,258 320,233" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.45"/>
+  <polygon points="385,208 415,208 430,233 415,258 385,258 370,233" fill="#991b1b" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="435,208 465,208 480,233 465,258 435,258 420,233" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.45"/>
+  <polygon points="485,208 515,208 530,233 515,258 485,258 470,233" fill="#7f1d1d" stroke="#dc2626" stroke-width="1.2" opacity="0.55"/>
+  <polygon points="535,208 565,208 580,233 565,258 535,258 520,233" fill="none" stroke="#991b1b" stroke-width="1.2" opacity="0.45"/>
+  <!-- Compromised cell highlight -->
+  <polygon points="310,158 340,158 355,183 340,208 310,208 295,183" fill="#ef4444" stroke="#fca5a5" stroke-width="2" opacity="0.35"/>
+  <text x="325" y="187" font-family="system-ui,sans-serif" font-size="14" font-weight="900" fill="#fca5a5" text-anchor="middle" opacity="0.9">!</text>
+  <polygon points="385,208 415,208 430,233 415,258 385,258 370,233" fill="#ef4444" stroke="#fca5a5" stroke-width="2" opacity="0.35"/>
+  <text x="400" y="237" font-family="system-ui,sans-serif" font-size="14" font-weight="900" fill="#fca5a5" text-anchor="middle" opacity="0.9">!</text>
+  <!-- Broken assumption badge -->
+  <rect x="590" y="165" width="145" height="22" rx="5" fill="#991b1b" opacity="0.9"/>
+  <text x="662" y="180" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fecaca" text-anchor="middle">Assumption Broken</text>
+  <!-- Title -->
+  <text x="400" y="308" font-family="system-ui,-apple-system,sans-serif" font-size="40" font-weight="800" fill="white" text-anchor="middle" opacity="0.95">LiDAR New-Gen</text>
+  <text x="400" y="348" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="600" fill="#fca5a5" text-anchor="middle">Spoofing Attacks</text>
+  <text x="400" y="380" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="#fca5a5" text-anchor="middle" letter-spacing="2" opacity="0.8">NDSS 2024</text>
 </svg>
