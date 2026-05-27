@@ -5,6 +5,7 @@ venue: ESSERC
 year: 2025
 status: published
 section: Circuit
+description_ja: "顕著性検出器を内蔵した4541 TOPS/Wのアナログコンピュートインメモリマクロ。電荷ドメインで非顕著領域の演算を動的にスキップし、視覚推論における圧倒的なエネルギー効率を実現する。エッジAIデバイスの次世代設計に向けた画期的なアーキテクチャを提案する。"
 teaser: assets/images/saliency-cim-teaser.svg
 authors:
   - name: "S. Ando"

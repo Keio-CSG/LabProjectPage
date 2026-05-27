@@ -5,6 +5,7 @@ venue: ICCAD
 year: 2024
 status: published
 section: Circuit
+description_ja: "確率的近似を用いてスパース性を活用するハイブリッドコンピュートインメモリアーキテクチャ。ニューラルネットワークの活性化スパース性を動的に検出・活用し、精度を落とさず大幅なエネルギー削減を実現する。次世代AIチップの低消費電力化に向けた新たな設計パラダイムを提示する。"
 teaser: assets/images/pacim-teaser.svg
 authors:
   - name: "W. Zhang"
