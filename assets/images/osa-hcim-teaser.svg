@@ -1,6 +1,100 @@
 <svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="450" fill="#0694a2"/>
-  <text x="400" y="200" font-family="sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">OSA-HCIM</text>
-  <text x="400" y="270" font-family="sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">ASP-DAC 2024</text>
-  <text x="400" y="320" font-family="sans-serif" font-size="18" fill="rgba(255,255,255,0.6)" text-anchor="middle">CIM · Hardware</text>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#051a1e"/>
+      <stop offset="100%" stop-color="#083038"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0891b2" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0891b2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <ellipse cx="400" cy="225" rx="340" ry="220" fill="url(#glow)"/>
+  <!-- SRAM CIM array (8 cols x 7 rows) -->
+  <!-- Each cell = bitcell with compute -->
+  <g>
+    <!-- Column headers -->
+    <text x="110" y="95" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle" opacity="0.7">BL0</text>
+    <text x="150" y="95" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle" opacity="0.7">BL1</text>
+    <text x="190" y="95" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle" opacity="0.7">BL2</text>
+    <text x="230" y="95" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle" opacity="0.7">BL3</text>
+    <text x="270" y="95" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle" opacity="0.7">BL4</text>
+    <text x="310" y="95" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle" opacity="0.7">BL5</text>
+    <text x="350" y="95" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle" opacity="0.7">BL6</text>
+    <text x="390" y="95" font-family="monospace" font-size="9" fill="#67e8f9" text-anchor="middle" opacity="0.7">BL7</text>
+  </g>
+  <!-- Row 0 - salient (active, bright) -->
+  <rect x="88"  y="103" width="44" height="34" rx="3" fill="#0891b2" opacity="0.85" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="128" y="103" width="44" height="34" rx="3" fill="#06b6d4" opacity="0.9" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="168" y="103" width="44" height="34" rx="3" fill="#0891b2" opacity="0.8" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="208" y="103" width="44" height="34" rx="3" fill="#22d3ee" opacity="0.95" stroke="#67e8f9" stroke-width="1.2"/>
+  <rect x="248" y="103" width="44" height="34" rx="3" fill="#06b6d4" opacity="0.85" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="288" y="103" width="44" height="34" rx="3" fill="#0891b2" opacity="0.8" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="328" y="103" width="44" height="34" rx="3" fill="#22d3ee" opacity="0.9" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="368" y="103" width="44" height="34" rx="3" fill="#06b6d4" opacity="0.85" stroke="#22d3ee" stroke-width="1"/>
+  <text x="74" y="125" font-family="monospace" font-size="9" fill="#22d3ee" text-anchor="end" opacity="0.8">WL0 ●</text>
+  <!-- Row 1 - skipped (dim) -->
+  <rect x="88"  y="143" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <rect x="128" y="143" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <rect x="168" y="143" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <rect x="208" y="143" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <rect x="248" y="143" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <rect x="288" y="143" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <rect x="328" y="143" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <rect x="368" y="143" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <text x="74" y="165" font-family="monospace" font-size="9" fill="#1e4a54" text-anchor="end" opacity="0.7">WL1 ○</text>
+  <!-- Row 2 - salient (active) -->
+  <rect x="88"  y="183" width="44" height="34" rx="3" fill="#06b6d4" opacity="0.85" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="128" y="183" width="44" height="34" rx="3" fill="#0891b2" opacity="0.8" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="168" y="183" width="44" height="34" rx="3" fill="#67e8f9" opacity="0.95" stroke="#a5f3fc" stroke-width="1.2"/>
+  <rect x="208" y="183" width="44" height="34" rx="3" fill="#22d3ee" opacity="0.9" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="248" y="183" width="44" height="34" rx="3" fill="#0891b2" opacity="0.85" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="288" y="183" width="44" height="34" rx="3" fill="#06b6d4" opacity="0.9" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="328" y="183" width="44" height="34" rx="3" fill="#22d3ee" opacity="0.85" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="368" y="183" width="44" height="34" rx="3" fill="#06b6d4" opacity="0.8" stroke="#22d3ee" stroke-width="1"/>
+  <text x="74" y="205" font-family="monospace" font-size="9" fill="#22d3ee" text-anchor="end" opacity="0.8">WL2 ●</text>
+  <!-- Row 3 - skipped -->
+  <rect x="88"  y="223" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <rect x="128" y="223" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <rect x="168" y="223" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <rect x="208" y="223" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <rect x="248" y="223" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <rect x="288" y="223" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <rect x="328" y="223" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <rect x="368" y="223" width="44" height="34" rx="3" fill="#0a2a30" opacity="0.7"/>
+  <text x="74" y="245" font-family="monospace" font-size="9" fill="#1e4a54" text-anchor="end" opacity="0.7">WL3 ○</text>
+  <!-- Row 4 - salient -->
+  <rect x="88"  y="263" width="44" height="34" rx="3" fill="#22d3ee" opacity="0.9" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="128" y="263" width="44" height="34" rx="3" fill="#06b6d4" opacity="0.85" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="168" y="263" width="44" height="34" rx="3" fill="#0891b2" opacity="0.8" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="208" y="263" width="44" height="34" rx="3" fill="#06b6d4" opacity="0.9" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="248" y="263" width="44" height="34" rx="3" fill="#22d3ee" opacity="0.85" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="288" y="263" width="44" height="34" rx="3" fill="#0891b2" opacity="0.8" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="328" y="263" width="44" height="34" rx="3" fill="#06b6d4" opacity="0.85" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="368" y="263" width="44" height="34" rx="3" fill="#22d3ee" opacity="0.9" stroke="#22d3ee" stroke-width="1"/>
+  <text x="74" y="285" font-family="monospace" font-size="9" fill="#22d3ee" text-anchor="end" opacity="0.8">WL4 ●</text>
+  <!-- Dynamic Precision panel -->
+  <rect x="460" y="100" width="280" height="220" rx="10" fill="#0a2a30" stroke="#22d3ee" stroke-width="1.2" opacity="0.9"/>
+  <text x="600" y="125" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#a5f3fc" text-anchor="middle">Dynamic Precision</text>
+  <!-- 8-bit bar -->
+  <text x="490" y="158" font-family="monospace" font-size="10" fill="#67e8f9">8-bit</text>
+  <rect x="530" y="148" width="160" height="16" rx="3" fill="#0891b2" opacity="0.9"/>
+  <text x="695" y="161" font-family="monospace" font-size="10" fill="#a5f3fc">high acc</text>
+  <!-- 4-bit bar -->
+  <text x="490" y="198" font-family="monospace" font-size="10" fill="#67e8f9">4-bit</text>
+  <rect x="530" y="188" width="90" height="16" rx="3" fill="#06b6d4" opacity="0.85"/>
+  <text x="695" y="201" font-family="monospace" font-size="10" fill="#94a3b8">balanced</text>
+  <!-- 2-bit bar -->
+  <text x="490" y="238" font-family="monospace" font-size="10" fill="#67e8f9">2-bit</text>
+  <rect x="530" y="228" width="48" height="16" rx="3" fill="#22d3ee" opacity="0.75"/>
+  <text x="695" y="241" font-family="monospace" font-size="10" fill="#94a3b8">fast/eff</text>
+  <!-- Arrow indicating selection -->
+  <polygon points="518,194 528,199 518,204" fill="#22d3ee" opacity="0.8"/>
+  <rect x="468" y="256" width="264" height="48" rx="6" fill="#0e3d47" opacity="0.8"/>
+  <text x="600" y="276" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#a5f3fc" text-anchor="middle">On-the-Fly Saliency Gate</text>
+  <text x="600" y="294" font-family="system-ui,sans-serif" font-size="10" fill="#67e8f9" text-anchor="middle">ASP-DAC 2024 · arXiv:2308.15040</text>
+  <!-- Title -->
+  <text x="400" y="368" font-family="system-ui,-apple-system,sans-serif" font-size="46" font-weight="800" fill="white" text-anchor="middle" opacity="0.95">OSA-HCIM</text>
+  <text x="400" y="402" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="#67e8f9" text-anchor="middle" letter-spacing="2">ASP-DAC 2024</text>
 </svg>
