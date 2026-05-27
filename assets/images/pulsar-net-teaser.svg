@@ -1,0 +1,36 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0a1e"/>
+      <stop offset="100%" stop-color="#1a0a2e"/>
+    </linearGradient>
+    <radialGradient id="pulse" cx="50%" cy="55%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <ellipse cx="400" cy="248" rx="340" ry="240" fill="url(#pulse)"/>
+  <!-- Pulse rings -->
+  <circle cx="400" cy="248" r="40" fill="none" stroke="#a78bfa" stroke-width="2.5" opacity="0.9"/>
+  <circle cx="400" cy="248" r="80" fill="none" stroke="#8b5cf6" stroke-width="1.8" opacity="0.7"/>
+  <circle cx="400" cy="248" r="125" fill="none" stroke="#7c3aed" stroke-width="1.4" opacity="0.5"/>
+  <circle cx="400" cy="248" r="175" fill="none" stroke="#6d28d9" stroke-width="1" opacity="0.35"/>
+  <circle cx="400" cy="248" r="230" fill="none" stroke="#5b21b6" stroke-width="0.8" opacity="0.22"/>
+  <circle cx="400" cy="248" r="290" fill="none" stroke="#4c1d95" stroke-width="0.6" opacity="0.15"/>
+  <!-- Center sensor -->
+  <circle cx="400" cy="248" r="12" fill="#c4b5fd" opacity="0.95"/>
+  <circle cx="400" cy="248" r="6" fill="#fff" opacity="0.9"/>
+  <!-- Attack beam (blocked) -->
+  <line x1="650" y1="100" x2="440" y2="236" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="8 5" opacity="0.7"/>
+  <circle cx="650" cy="100" r="8" fill="#ef4444" opacity="0.8"/>
+  <!-- Shield indicator -->
+  <path d="M 400 215 L 420 225 L 420 255 Q 420 275 400 285 Q 380 275 380 255 L 380 225 Z" fill="#7c3aed" opacity="0.35"/>
+  <path d="M 400 215 L 420 225 L 420 255 Q 420 275 400 285 Q 380 275 380 255 L 380 225 Z" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.7"/>
+  <!-- Title -->
+  <text x="400" y="118" font-family="system-ui,-apple-system,sans-serif" font-size="46" font-weight="800" fill="white" text-anchor="middle" opacity="0.95">PULSAR-Net</text>
+  <text x="400" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="17" fill="#c4b5fd" text-anchor="middle" letter-spacing="2">CVPR 2026</text>
+  <!-- Blocked label -->
+  <rect x="605" y="75" width="68" height="20" rx="4" fill="#ef4444" opacity="0.85"/>
+  <text x="639" y="89" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">BLOCKED</text>
+</svg>

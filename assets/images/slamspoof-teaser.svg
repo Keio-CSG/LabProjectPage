@@ -1,0 +1,6 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#057a55"/>
+  <text x="400" y="200" font-family="sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">SLAMSpoof</text>
+  <text x="400" y="270" font-family="sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">ICRA 2025</text>
+  <text x="400" y="320" font-family="sans-serif" font-size="18" fill="rgba(255,255,255,0.6)" text-anchor="middle">LiDAR · Security</text>
+</svg>

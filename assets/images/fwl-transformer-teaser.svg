@@ -1,0 +1,58 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0f1e"/>
+      <stop offset="100%" stop-color="#1a1040"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- Attention map grid (8x5) -->
+  <!-- Row 0 -->
+  <rect x="80"  y="130" width="55" height="40" rx="3" fill="#312e81" opacity="0.9"/>
+  <rect x="143" y="130" width="55" height="40" rx="3" fill="#3730a3" opacity="0.5"/>
+  <rect x="206" y="130" width="55" height="40" rx="3" fill="#4338ca" opacity="0.75"/>
+  <rect x="269" y="130" width="55" height="40" rx="3" fill="#2e1065" opacity="0.4"/>
+  <rect x="332" y="130" width="55" height="40" rx="3" fill="#4f46e5" opacity="0.85"/>
+  <rect x="395" y="130" width="55" height="40" rx="3" fill="#6366f1" opacity="0.95"/>
+  <rect x="458" y="130" width="55" height="40" rx="3" fill="#312e81" opacity="0.45"/>
+  <rect x="521" y="130" width="55" height="40" rx="3" fill="#3730a3" opacity="0.6"/>
+  <!-- Row 1 -->
+  <rect x="80"  y="178" width="55" height="40" rx="3" fill="#4338ca" opacity="0.55"/>
+  <rect x="143" y="178" width="55" height="40" rx="3" fill="#6366f1" opacity="0.9"/>
+  <rect x="206" y="178" width="55" height="40" rx="3" fill="#312e81" opacity="0.35"/>
+  <rect x="269" y="178" width="55" height="40" rx="3" fill="#4f46e5" opacity="0.7"/>
+  <rect x="332" y="178" width="55" height="40" rx="3" fill="#818cf8" opacity="0.95"/>
+  <rect x="395" y="178" width="55" height="40" rx="3" fill="#4338ca" opacity="0.5"/>
+  <rect x="458" y="178" width="55" height="40" rx="3" fill="#6366f1" opacity="0.8"/>
+  <rect x="521" y="178" width="55" height="40" rx="3" fill="#312e81" opacity="0.4"/>
+  <!-- Row 2 (highlighted salient) -->
+  <rect x="80"  y="226" width="55" height="40" rx="3" fill="#818cf8" opacity="0.85"/>
+  <rect x="143" y="226" width="55" height="40" rx="3" fill="#a5b4fc" opacity="0.95"/>
+  <rect x="206" y="226" width="55" height="40" rx="3" fill="#818cf8" opacity="0.9"/>
+  <rect x="269" y="226" width="55" height="40" rx="3" fill="#6366f1" opacity="0.75"/>
+  <rect x="332" y="226" width="55" height="40" rx="3" fill="#c7d2fe" opacity="1.0"/>
+  <rect x="395" y="226" width="55" height="40" rx="3" fill="#818cf8" opacity="0.8"/>
+  <rect x="458" y="226" width="55" height="40" rx="3" fill="#a5b4fc" opacity="0.9"/>
+  <rect x="521" y="226" width="55" height="40" rx="3" fill="#6366f1" opacity="0.7"/>
+  <!-- Row 3 -->
+  <rect x="80"  y="274" width="55" height="40" rx="3" fill="#3730a3" opacity="0.45"/>
+  <rect x="143" y="274" width="55" height="40" rx="3" fill="#4338ca" opacity="0.6"/>
+  <rect x="206" y="274" width="55" height="40" rx="3" fill="#6366f1" opacity="0.75"/>
+  <rect x="269" y="274" width="55" height="40" rx="3" fill="#312e81" opacity="0.5"/>
+  <rect x="332" y="274" width="55" height="40" rx="3" fill="#4338ca" opacity="0.65"/>
+  <rect x="395" y="274" width="55" height="40" rx="3" fill="#312e81" opacity="0.4"/>
+  <rect x="458" y="274" width="55" height="40" rx="3" fill="#3730a3" opacity="0.55"/>
+  <rect x="521" y="274" width="55" height="40" rx="3" fill="#4f46e5" opacity="0.6"/>
+  <!-- Pruned tokens (X marks) -->
+  <line x1="84" y1="134" x2="130" y2="166" stroke="#ef4444" stroke-width="2" opacity="0.7"/>
+  <line x1="130" y1="134" x2="84" y2="166" stroke="#ef4444" stroke-width="2" opacity="0.7"/>
+  <line x1="273" y1="134" x2="319" y2="166" stroke="#ef4444" stroke-width="2" opacity="0.7"/>
+  <line x1="319" y1="134" x2="273" y2="166" stroke="#ef4444" stroke-width="2" opacity="0.7"/>
+  <!-- Throughput arrow -->
+  <rect x="620" y="160" width="130" height="4" rx="2" fill="#10b981" opacity="0.8"/>
+  <polygon points="750,155 768,162 750,169" fill="#10b981" opacity="0.8"/>
+  <text x="685" y="152" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#10b981" text-anchor="middle">×2.4 faster</text>
+  <!-- Title -->
+  <text x="400" y="68" font-family="system-ui,-apple-system,sans-serif" font-size="40" font-weight="800" fill="white" text-anchor="middle" opacity="0.95">FWL Transformer</text>
+  <text x="400" y="103" font-family="system-ui,-apple-system,sans-serif" font-size="16" fill="#a5b4fc" text-anchor="middle" letter-spacing="2">NeurIPS 2025 · Under Review</text>
+</svg>

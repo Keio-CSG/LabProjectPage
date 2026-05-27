@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keio CSG — Research Publications</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <img src="logo/health.webp" alt="Keio CSG Logo" class="lab-logo" />
+      <div class="header-text">
+        <p class="lab-abbr">Keio CSG</p>
+        <h1>Keio Computing and Sensing Group</h1>
+        <p class="lab-tagline">Research in LiDAR sensing, hardware-efficient AI, and autonomous systems security.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="filter-bar" id="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="LiDAR">LiDAR</button>
+    <button class="filter-btn" data-filter="Security">Security</button>
+    <button class="filter-btn" data-filter="Dataset">Dataset</button>
+    <button class="filter-btn" data-filter="Communication">Communication</button>
+    <button class="filter-btn" data-filter="Sports">Sports</button>
+    <button class="filter-btn" data-filter="CIM">CIM</button>
+    <button class="filter-btn" data-filter="Hardware">Hardware</button>
+    <button class="filter-btn" data-filter="Edge AI">Edge AI</button>
+    <button class="filter-btn" data-filter="Transformer">Transformer</button>
+    <button class="filter-btn" data-filter="Efficiency">Efficiency</button>
+  </div>
+
+  <main id="project-grid">
+    <!--CARDS-->
+  </main>
+</div>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Keio Computing and Sensing Group</span>
+    <a href="https://sites.google.com/keio.jp/keio-csg" target="_blank" rel="noopener">sites.google.com/keio.jp/keio-csg</a>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    const bar = document.getElementById('filter-bar');
+    const grid = document.getElementById('project-grid');
+
+    bar.addEventListener('click', function (e) {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+
+      bar.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+      grid.querySelectorAll('.project-card').forEach(function (card) {
+        if (filter === 'all') {
+          card.classList.remove('hidden');
+        } else {
+          const tags = (card.dataset.tags || '').split(',').map(function (t) { return t.trim(); });
+          card.classList.toggle('hidden', !tags.includes(filter));
+        }
+      });
+
+      grid.querySelectorAll('.project-section').forEach(function (sec) {
+        const hasVisible = sec.querySelectorAll('.project-card:not(.hidden)').length > 0;
+        sec.style.display = hasVisible ? '' : 'none';
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
