@@ -11,9 +11,10 @@ const ICONS = {
   slides: `<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 0 0 0 2h1v11a2 2 0 0 0 2 2h4l-1 2H7a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2h-1l-1-2h4a2 2 0 0 0 2-2V5h1a1 1 0 1 0 0-2H2zm3 2h14v11H5V5z"/></svg>`,
   poster: `<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5 12H7v-.5c0-2.5 2.5-4 5-4s5 1.5 5 4V18z"/></svg>`,
   video: `<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>`,
+  press: `<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3h2v13a2 2 0 0 1-2 2H4zm14-2h2V9h-2v11zM4 4v16h12V4H4zm2 4h8v2H6V8zm0 4h8v2H6v-2zm0 4h5v2H6v-2z"/></svg>`,
 };
 
-const LINK_LABELS = { paper: 'Paper', arxiv: 'arXiv', code: 'Code', project: 'Project Page', slides: 'Slides', poster: 'Poster', video: 'Video' };
+const LINK_LABELS = { paper: 'Paper', arxiv: 'arXiv', code: 'Code', project: 'Project Page', slides: 'Slides', poster: 'Poster', video: 'Video', press: 'Press' };
 const STATUS_LABELS = { published: 'Published', accepted: 'Accepted', 'under-review': 'Under Review', preprint: 'Preprint' };
 const SECTION_ORDER = ['Sensor', 'Circuit'];
 
@@ -64,7 +65,9 @@ function buildCard(data, content) {
   const descHtml = renderDescription(content);
   const descJa = data.description_ja ? `<p class="card-description-ja">${escapeHtml(data.description_ja)}</p>` : '';
 
-  return `<article class="project-card" data-tags="${escapeHtml(tagsStr)}" data-venue="${escapeHtml(venue)}">
+  const isHighlight = data.highlight === true;
+
+  return `<article class="project-card" data-tags="${escapeHtml(tagsStr)}" data-venue="${escapeHtml(venue)}" data-highlight="${isHighlight ? 'true' : 'false'}">
   <div class="card-teaser">
     <img src="${escapeHtml(teaser)}" alt="${escapeHtml(title)} teaser" loading="lazy" />
   </div>

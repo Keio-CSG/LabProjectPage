@@ -4,6 +4,7 @@ short_title: "LiDAR Spoofing (High Speed)"
 venue: NDSS
 year: 2025
 status: published
+highlight: true
 section: Sensor
 description_ja: "高速走行・長距離条件下での自動運転車両に対するLiDARスプーフィング攻撃の現実的な有効性を検証した研究。これまで安全と想定されていた条件下でも攻撃が成立することを明らかにし、既存のセキュリティ前提を覆す実験的証拠を提示する。"
 teaser: assets/images/lidar-spoof-highspeed-teaser.svg

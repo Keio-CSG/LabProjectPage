@@ -66,6 +66,46 @@ header {
   margin-top: 0.1rem;
 }
 
+/* ── Highlight toggle ── */
+.highlight-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid #f1f5f9;
+  margin-bottom: 0.1rem;
+}
+
+.highlight-toggle {
+  padding: 0.3rem 1rem;
+  border: 1.5px solid #f59e0b;
+  border-radius: 999px;
+  background: #fff;
+  color: #b45309;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  letter-spacing: 0.02em;
+}
+
+.highlight-toggle:hover {
+  background: #fef3c7;
+}
+
+.highlight-toggle.active {
+  background: #f59e0b;
+  border-color: #f59e0b;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+}
+
+.highlight-desc {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  letter-spacing: 0.01em;
+}
+
 /* ── Filter panel ── */
 .filter-panel {
   display: flex;
@@ -360,6 +400,13 @@ header {
 .link-poster .badge-label { background: #7c3aed; }
 .link-video  .badge-icon  { background: #b91c1c; }
 .link-video  .badge-label { background: #dc2626; }
+.link-press  .badge-icon  { background: #0369a1; }
+.link-press  .badge-label { background: #0284c7; }
+
+/* ── Highlighted card accent ── */
+.project-card[data-highlight="true"] {
+  border-top: 3px solid #f59e0b;
+}
 
 /* ── Footer ── */
 footer {

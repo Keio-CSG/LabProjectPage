@@ -1,0 +1,130 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="100%" stop-color="#14102b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="40%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <ellipse cx="320" cy="225" rx="320" ry="220" fill="url(#glow)"/>
+
+  <!-- ROM array (left) -->
+  <rect x="50" y="80" width="280" height="240" rx="8" fill="#100d24" stroke="#7c3aed" stroke-width="1.2" opacity="0.9"/>
+  <text x="190" y="103" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#c4b5fd" text-anchor="middle">CiROM Array (1.58-bit)</text>
+
+  <!-- Ternary weight cells: -1, 0, +1 represented as colors -->
+  <!-- Row labels -->
+  <text x="68" y="128" font-family="monospace" font-size="9" fill="#7c3aed" opacity="0.8">WL0</text>
+  <text x="68" y="158" font-family="monospace" font-size="9" fill="#7c3aed" opacity="0.8">WL1</text>
+  <text x="68" y="188" font-family="monospace" font-size="9" fill="#7c3aed" opacity="0.8">WL2</text>
+  <text x="68" y="218" font-family="monospace" font-size="9" fill="#7c3aed" opacity="0.8">WL3</text>
+  <text x="68" y="248" font-family="monospace" font-size="9" fill="#7c3aed" opacity="0.8">WL4</text>
+  <text x="68" y="278" font-family="monospace" font-size="9" fill="#7c3aed" opacity="0.8">WL5</text>
+
+  <!-- Cell grid: 8 cols x 6 rows, ternary values -->
+  <!-- Row 0: +1 0 -1 +1 0 +1 -1 0 -->
+  <rect x="95"  y="113" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.9"/>
+  <rect x="121" y="113" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="147" y="113" width="22" height="22" rx="2" fill="#4c1d95" opacity="0.5"/>
+  <rect x="173" y="113" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.9"/>
+  <rect x="199" y="113" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="225" y="113" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.85"/>
+  <rect x="251" y="113" width="22" height="22" rx="2" fill="#4c1d95" opacity="0.5"/>
+  <rect x="277" y="113" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <!-- Row 1 -->
+  <rect x="95"  y="143" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="121" y="143" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.9"/>
+  <rect x="147" y="143" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.85"/>
+  <rect x="173" y="143" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="199" y="143" width="22" height="22" rx="2" fill="#4c1d95" opacity="0.5"/>
+  <rect x="225" y="143" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="251" y="143" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.9"/>
+  <rect x="277" y="143" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.85"/>
+  <!-- Row 2 -->
+  <rect x="95"  y="173" width="22" height="22" rx="2" fill="#4c1d95" opacity="0.5"/>
+  <rect x="121" y="173" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="147" y="173" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.9"/>
+  <rect x="173" y="173" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.85"/>
+  <rect x="199" y="173" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="225" y="173" width="22" height="22" rx="2" fill="#4c1d95" opacity="0.5"/>
+  <rect x="251" y="173" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="277" y="173" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.9"/>
+  <!-- Row 3 -->
+  <rect x="95"  y="203" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.85"/>
+  <rect x="121" y="203" width="22" height="22" rx="2" fill="#4c1d95" opacity="0.5"/>
+  <rect x="147" y="203" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="173" y="203" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.9"/>
+  <rect x="199" y="203" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.85"/>
+  <rect x="225" y="203" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="251" y="203" width="22" height="22" rx="2" fill="#4c1d95" opacity="0.5"/>
+  <rect x="277" y="203" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <!-- Row 4 -->
+  <rect x="95"  y="233" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="121" y="233" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.9"/>
+  <rect x="147" y="233" width="22" height="22" rx="2" fill="#4c1d95" opacity="0.5"/>
+  <rect x="173" y="233" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="199" y="233" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.85"/>
+  <rect x="225" y="233" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.9"/>
+  <rect x="251" y="233" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="277" y="233" width="22" height="22" rx="2" fill="#4c1d95" opacity="0.5"/>
+  <!-- Row 5 -->
+  <rect x="95"  y="263" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.9"/>
+  <rect x="121" y="263" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="147" y="263" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.85"/>
+  <rect x="173" y="263" width="22" height="22" rx="2" fill="#4c1d95" opacity="0.5"/>
+  <rect x="199" y="263" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+  <rect x="225" y="263" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.9"/>
+  <rect x="251" y="263" width="22" height="22" rx="2" fill="#7c3aed" opacity="0.85"/>
+  <rect x="277" y="263" width="22" height="22" rx="2" fill="#1e1b4b" opacity="0.6"/>
+
+  <!-- Legend -->
+  <rect x="75" y="300" width="14" height="14" rx="2" fill="#7c3aed" opacity="0.9"/>
+  <text x="93" y="312" font-family="monospace" font-size="9" fill="#c4b5fd">+1</text>
+  <rect x="120" y="300" width="14" height="14" rx="2" fill="#1e1b4b" opacity="0.7" stroke="#4c1d95" stroke-width="0.8"/>
+  <text x="138" y="312" font-family="monospace" font-size="9" fill="#c4b5fd"> 0</text>
+  <rect x="165" y="300" width="14" height="14" rx="2" fill="#4c1d95" opacity="0.5"/>
+  <text x="183" y="312" font-family="monospace" font-size="9" fill="#c4b5fd">−1</text>
+  <text x="225" y="312" font-family="monospace" font-size="9" fill="#7c3aed" opacity="0.8">1.58-bit ternary</text>
+
+  <!-- Arrow: ROM → Inference -->
+  <line x1="340" y1="200" x2="395" y2="200" stroke="#7c3aed" stroke-width="2.5" opacity="0.8"/>
+  <polygon points="395,194 410,200 395,206" fill="#7c3aed" opacity="0.8"/>
+  <text x="375" y="192" font-family="system-ui,sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">No Reload</text>
+
+  <!-- Right panel: innovations + metrics -->
+  <rect x="420" y="80" width="340" height="240" rx="8" fill="#100d24" stroke="#a78bfa" stroke-width="1.2" opacity="0.9"/>
+  <text x="590" y="103" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#c4b5fd" text-anchor="middle">BitROM Architecture</text>
+
+  <!-- Three innovations -->
+  <rect x="438" y="112" width="305" height="22" rx="4" fill="#1e1b4b" opacity="0.8"/>
+  <text x="590" y="127" font-family="system-ui,sans-serif" font-size="10" fill="#c4b5fd" text-anchor="middle">① Bidirectional ROM Arrays</text>
+  <rect x="438" y="140" width="305" height="22" rx="4" fill="#1e1b4b" opacity="0.8"/>
+  <text x="590" y="155" font-family="system-ui,sans-serif" font-size="10" fill="#c4b5fd" text-anchor="middle">② Tri-Mode Local Accumulators</text>
+  <rect x="438" y="168" width="305" height="22" rx="4" fill="#1e1b4b" opacity="0.8"/>
+  <text x="590" y="183" font-family="system-ui,sans-serif" font-size="10" fill="#c4b5fd" text-anchor="middle">③ Integrated eDRAM KV-Cache</text>
+
+  <!-- DRAM reduction -->
+  <rect x="438" y="200" width="305" height="32" rx="5" fill="#2e1065" opacity="0.8" stroke="#7c3aed" stroke-width="0.8"/>
+  <text x="590" y="215" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#a78bfa" text-anchor="middle">External DRAM Access −43.6%</text>
+  <text x="590" y="228" font-family="system-ui,sans-serif" font-size="10" fill="#c4b5fd" text-anchor="middle" opacity="0.8">during LLM decoding</text>
+
+  <!-- Key metrics -->
+  <rect x="438" y="242" width="145" height="56" rx="5" fill="#1e1b4b" opacity="0.85"/>
+  <text x="510" y="262" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#a78bfa" text-anchor="middle">20.8</text>
+  <text x="510" y="278" font-family="system-ui,sans-serif" font-size="10" fill="#c4b5fd" text-anchor="middle">TOPS/W</text>
+  <text x="510" y="292" font-family="system-ui,sans-serif" font-size="9" fill="#7c3aed" text-anchor="middle" opacity="0.8">Energy Efficiency</text>
+
+  <rect x="595" y="242" width="148" height="56" rx="5" fill="#1e1b4b" opacity="0.85"/>
+  <text x="669" y="262" font-family="system-ui,sans-serif" font-size="20" font-weight="800" fill="#a78bfa" text-anchor="middle">10×</text>
+  <text x="669" y="278" font-family="system-ui,sans-serif" font-size="10" fill="#c4b5fd" text-anchor="middle">Area Efficiency</text>
+  <text x="669" y="292" font-family="system-ui,sans-serif" font-size="9" fill="#7c3aed" text-anchor="middle" opacity="0.8">vs. digital CiROM</text>
+
+  <!-- Title -->
+  <text x="400" y="378" font-family="system-ui,-apple-system,sans-serif" font-size="42" font-weight="800" fill="white" text-anchor="middle" opacity="0.95">BitROM</text>
+  <text x="400" y="410" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#a78bfa" text-anchor="middle">Weight Reload-Free CiROM for 1.58-bit LLM Inference</text>
+  <text x="400" y="433" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#7c3aed" text-anchor="middle" letter-spacing="2">ASP-DAC 2026</text>
+</svg>

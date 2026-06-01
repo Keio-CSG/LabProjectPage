@@ -5,7 +5,8 @@ venue: ICCAD
 year: 2024
 status: published
 section: Circuit
-description_ja: "確率的近似を用いてスパース性を活用するハイブリッドコンピュートインメモリアーキテクチャ。ニューラルネットワークの活性化スパース性を動的に検出・活用し、精度を落とさず大幅なエネルギー削減を実現する。次世代AIチップの低消費電力化に向けた新たな設計パラダイムを提示する。"
+highlight: true
+description_ja: "確率的近似（PAC）によりベクトル演算をスカラー演算に変換し、スパース性を最大限活用するハイブリッドCIMアーキテクチャ。最小有効ビットの省略でメモリ転送量を半減し、従来比4倍の近似誤差低減を実現。65nm CMOSで14.63 TOPS/Wを達成し、ResNet-18でImageNet精度を維持する。"
 teaser: assets/images/pacim-teaser.svg
 authors:
   - name: "W. Zhang"
@@ -23,10 +24,11 @@ tags:
   - CIM
   - Hardware
 links:
+  paper: https://dl.acm.org/doi/10.1145/3676536.3676704
   code: https://github.com/Keio-CSG/PACiM
 ---
 
-A sparsity-centric hybrid compute-in-memory architecture using probabilistic approximation
-to exploit activation sparsity in neural networks.
-Dynamically skips zero-valued computations to achieve significant energy reduction
-without sacrificing model accuracy.
+A sparsity-centric hybrid compute-in-memory architecture using probabilistic approximation (PAC)
+to convert vector operations into scalar computations, halving memory transfers by eliminating LSB transmission.
+Achieves 14.63 TOPS/W in 65 nm CMOS with 4× lower approximation error than prior methods,
+maintaining ResNet-18 ImageNet accuracy.

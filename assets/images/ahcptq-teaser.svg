@@ -1,0 +1,93 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050b1a"/>
+      <stop offset="100%" stop-color="#0d1a3d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <ellipse cx="400" cy="225" rx="360" ry="220" fill="url(#glow)"/>
+
+  <!-- Left: Heavy-tailed distribution + HLUQ -->
+  <rect x="50" y="80" width="310" height="230" rx="8" fill="#0d1535" stroke="#6366f1" stroke-width="1.2" opacity="0.9"/>
+  <text x="205" y="104" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#a5b4fc" text-anchor="middle">Post-GELU Activation Distribution</text>
+
+  <!-- Histogram bars (heavy-tailed) -->
+  <!-- Dense region near 0 (log quantization zone) -->
+  <rect x="70"  y="255" width="14" height="20"  rx="1" fill="#6366f1" opacity="0.5"/>
+  <rect x="86"  y="230" width="14" height="45"  rx="1" fill="#6366f1" opacity="0.6"/>
+  <rect x="102" y="190" width="14" height="85"  rx="1" fill="#818cf8" opacity="0.8"/>
+  <rect x="118" y="160" width="14" height="115" rx="1" fill="#a5b4fc" opacity="0.9"/>
+  <rect x="134" y="155" width="14" height="120" rx="1" fill="#c7d2fe" opacity="1.0"/>
+  <rect x="150" y="170" width="14" height="105" rx="1" fill="#a5b4fc" opacity="0.9"/>
+  <rect x="166" y="200" width="14" height="75"  rx="1" fill="#818cf8" opacity="0.8"/>
+  <rect x="182" y="230" width="14" height="45"  rx="1" fill="#6366f1" opacity="0.6"/>
+  <!-- Sparse large values (uniform zone) -->
+  <rect x="198" y="265" width="14" height="10"  rx="1" fill="#4f46e5" opacity="0.5"/>
+  <rect x="214" y="268" width="14" height="7"   rx="1" fill="#4338ca" opacity="0.45"/>
+  <rect x="230" y="270" width="14" height="5"   rx="1" fill="#4338ca" opacity="0.4"/>
+  <rect x="246" y="271" width="14" height="4"   rx="1" fill="#3730a3" opacity="0.35"/>
+  <rect x="262" y="272" width="14" height="3"   rx="1" fill="#3730a3" opacity="0.3"/>
+  <rect x="278" y="273" width="14" height="2"   rx="1" fill="#312e81" opacity="0.25"/>
+  <rect x="294" y="273" width="14" height="2"   rx="1" fill="#312e81" opacity="0.2"/>
+  <!-- Baseline -->
+  <line x1="68" y1="275" x2="312" y2="275" stroke="#4b5563" stroke-width="1" opacity="0.6"/>
+
+  <!-- Zone divider -->
+  <line x1="196" y1="120" x2="196" y2="275" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.8"/>
+
+  <!-- Log zone label -->
+  <rect x="70" y="118" width="105" height="18" rx="3" fill="#312e81" opacity="0.8"/>
+  <text x="122" y="131" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#a5b4fc" text-anchor="middle">Log₂ (dense)</text>
+  <!-- Uniform zone label -->
+  <rect x="200" y="118" width="105" height="18" rx="3" fill="#1e3a8a" opacity="0.8"/>
+  <text x="252" y="131" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#93c5fd" text-anchor="middle">Uniform (sparse)</text>
+
+  <!-- HLUQ badge -->
+  <rect x="70" y="290" width="280" height="26" rx="5" fill="#312e81" opacity="0.9"/>
+  <text x="210" y="308" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#c7d2fe" text-anchor="middle">Hybrid Log-Uniform Quantization (HLUQ)</text>
+
+  <!-- Arrow -->
+  <line x1="370" y1="195" x2="420" y2="195" stroke="#6366f1" stroke-width="2.5" opacity="0.8"/>
+  <polygon points="420,189 435,195 420,201" fill="#6366f1" opacity="0.8"/>
+
+  <!-- Right: Hardware metrics panel -->
+  <rect x="440" y="80" width="315" height="230" rx="8" fill="#0d1535" stroke="#818cf8" stroke-width="1.2" opacity="0.9"/>
+  <text x="597" y="104" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#a5b4fc" text-anchor="middle">FPGA Hardware Results</text>
+
+  <!-- W4A4 badge -->
+  <rect x="460" y="115" width="275" height="36" rx="6" fill="#312e81" opacity="0.9"/>
+  <text x="597" y="132" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#c7d2fe" text-anchor="middle">W4A4 Quantization — First on SAM</text>
+  <text x="597" y="146" font-family="system-ui,sans-serif" font-size="10" fill="#a5b4fc" text-anchor="middle" opacity="0.85">vs. PTQ4SAM: 3.8% → 36.6% mAP</text>
+
+  <!-- Speedup bar -->
+  <text x="460" y="177" font-family="monospace" font-size="10" fill="#a5b4fc">Speedup</text>
+  <rect x="530" y="165" width="195" height="16" rx="3" fill="#1e1b4b" opacity="0.8"/>
+  <rect x="530" y="165" width="195" height="16" rx="3" fill="#6366f1" opacity="0.85"/>
+  <text x="730" y="177" font-family="monospace" font-size="10" fill="#c7d2fe" text-anchor="end">7.89×</text>
+
+  <!-- Energy bar -->
+  <text x="460" y="207" font-family="monospace" font-size="10" fill="#a5b4fc">Energy</text>
+  <rect x="530" y="195" width="195" height="16" rx="3" fill="#1e1b4b" opacity="0.8"/>
+  <rect x="530" y="195" width="195" height="16" rx="3" fill="#4f46e5" opacity="0.85"/>
+  <text x="730" y="207" font-family="monospace" font-size="10" fill="#c7d2fe" text-anchor="end">8.64×</text>
+
+  <!-- CAG overhead reduction -->
+  <rect x="460" y="222" width="275" height="38" rx="5" fill="#0f172a" opacity="0.8" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="597" y="239" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#a5b4fc" text-anchor="middle">Channel-Aware Grouping (CAG)</text>
+  <text x="597" y="254" font-family="system-ui,sans-serif" font-size="11" fill="#818cf8" text-anchor="middle">Register overhead −99.7%</text>
+
+  <!-- mAP result -->
+  <rect x="460" y="270" width="275" height="30" rx="5" fill="#1e1b4b" opacity="0.85"/>
+  <text x="597" y="285" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#c7d2fe" text-anchor="middle">SAM-L · W4A4 · 36.6% mAP</text>
+  <text x="597" y="297" font-family="system-ui,sans-serif" font-size="9" fill="#818cf8" text-anchor="middle" opacity="0.8">Instance Segmentation · COCO</text>
+
+  <!-- Title -->
+  <text x="400" y="370" font-family="system-ui,-apple-system,sans-serif" font-size="30" font-weight="800" fill="white" text-anchor="middle" opacity="0.95">AHCPTQ</text>
+  <text x="400" y="398" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#a5b4fc" text-anchor="middle">Accurate &amp; Hardware-Compatible PTQ for SAM</text>
+  <text x="400" y="426" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#818cf8" text-anchor="middle" letter-spacing="2">ICCV 2025</text>
+</svg>

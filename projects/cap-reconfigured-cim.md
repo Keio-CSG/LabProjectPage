@@ -4,6 +4,7 @@ short_title: "Cap-Reconfigured CIM"
 venue: ISSCC
 year: 2024
 status: published
+highlight: true
 section: Circuit
 description_ja: "CNNとTransformerの両モデルを統一的に加速する818〜4094 TOPS/Wのキャパシタ再構成型コンピュートインメモリマクロ。層ごとのビット幅要件に合わせてキャパシタ構成を動的に切り替えることで、幅広いモデルアーキテクチャに対応したオンチップ推論を実現する。"
 teaser: assets/images/cap-reconfigured-cim-teaser.svg

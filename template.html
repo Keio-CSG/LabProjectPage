@@ -23,6 +23,10 @@
 
 <div class="container">
   <div class="filter-panel">
+    <div class="highlight-row">
+      <button class="highlight-toggle" id="toggle-highlight">★ Highlights Only</button>
+      <span class="highlight-desc">Top-tier venues: CVPR · NDSS · VLSI · ISSCC</span>
+    </div>
     <div class="filter-row">
       <span class="filter-label">Topic</span>
       <div class="filter-chips" id="filter-tag">
@@ -61,19 +65,23 @@
 
 <script>
   (function () {
-    const tagBar   = document.getElementById('filter-tag');
-    const venueBar = document.getElementById('filter-venue');
-    const grid     = document.getElementById('project-grid');
-    let activeTag   = 'all';
-    let activeVenue = 'all';
+    const tagBar    = document.getElementById('filter-tag');
+    const venueBar  = document.getElementById('filter-venue');
+    const hlToggle  = document.getElementById('toggle-highlight');
+    const grid      = document.getElementById('project-grid');
+    let activeTag       = 'all';
+    let activeVenue     = 'all';
+    let activeHighlight = false;
 
     function applyFilters() {
       grid.querySelectorAll('.project-card').forEach(function (card) {
-        const tags  = (card.dataset.tags  || '').split(',').map(function (t) { return t.trim(); });
-        const venue = (card.dataset.venue || '').trim();
-        const tagOk   = activeTag   === 'all' || tags.includes(activeTag);
-        const venueOk = activeVenue === 'all' || venue === activeVenue;
-        card.classList.toggle('hidden', !(tagOk && venueOk));
+        const tags      = (card.dataset.tags  || '').split(',').map(function (t) { return t.trim(); });
+        const venue     = (card.dataset.venue || '').trim();
+        const highlight = card.dataset.highlight === 'true';
+        const tagOk       = activeTag       === 'all' || tags.includes(activeTag);
+        const venueOk     = activeVenue     === 'all' || venue === activeVenue;
+        const highlightOk = !activeHighlight || highlight;
+        card.classList.toggle('hidden', !(tagOk && venueOk && highlightOk));
       });
       grid.querySelectorAll('.project-section').forEach(function (sec) {
         sec.style.display = sec.querySelectorAll('.project-card:not(.hidden)').length > 0 ? '' : 'none';
@@ -95,6 +103,12 @@
       venueBar.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
       activeVenue = btn.dataset.venue;
+      applyFilters();
+    });
+
+    hlToggle.addEventListener('click', function () {
+      activeHighlight = !activeHighlight;
+      hlToggle.classList.toggle('active', activeHighlight);
       applyFilters();
     });
   })();
