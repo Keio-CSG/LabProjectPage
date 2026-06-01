@@ -21,6 +21,7 @@ tags:
   - Transformer
 links:
   paper: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_AHCPTQ_Accurate_and_Hardware-Compatible_Post-Training_Quantization_for_Segment_Anything_Model_ICCV_2025_paper.pdf
+  code: https://github.com/Keio-CSG/AHCPTQ
 description_ja: "Segment Anything Model（SAM）の世界初4ビット量子化PTQを実現するハードウェア協調設計手法。post-GELUの重尾分布に対応するHybrid Log-Uniform量子化と、チャネルグルーピングによるオンチップレジスタ削減（−99.7%）を組み合わせる。FPGA上でW4A4動作時に浮動小数点比7.89倍の高速化・8.64倍の省エネを達成し、36.6% mAPを維持。"
 ---
 
