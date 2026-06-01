@@ -20,6 +20,7 @@ tags:
   - Hardware
   - Edge AI
 links:
+  arxiv: https://arxiv.org/abs/2509.08542
   code: https://github.com/Wenlun-Zhang/BitROM
 description_ja: "1.58ビット（三値）重みを用いた10億パラメータ規模LLM推論をウェイトリロードなしで実現するCiROMアーキテクチャ。双方向ROMアレイ・三値局所アキュムレータ・KVキャッシュ用eDRAMを統合し、外部DRAMアクセスを43.6%削減。20.8 TOPS/Wの高効率と先行デジタルCiROM比10倍の面積効率を達成する。"
 ---

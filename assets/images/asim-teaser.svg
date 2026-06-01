@@ -1,0 +1,101 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#051218"/>
+      <stop offset="100%" stop-color="#082030"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="40%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0891b2" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0891b2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <ellipse cx="320" cy="225" rx="340" ry="220" fill="url(#glow)"/>
+
+  <!-- SRAM CIM array with analog noise overlay (left) -->
+  <rect x="40" y="75" width="330" height="260" rx="8" fill="#0a1e28" stroke="#0891b2" stroke-width="1.2" opacity="0.9"/>
+  <text x="205" y="98" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#67e8f9" text-anchor="middle">SRAM-Based Analog CiM Array</text>
+
+  <!-- Grid cells: some nominal (teal), some noisy (orange/red) -->
+  <!-- Row 0 -->
+  <rect x="60"  y="110" width="36" height="28" rx="2" fill="#0891b2" opacity="0.85" stroke="#22d3ee" stroke-width="0.8"/>
+  <rect x="100" y="110" width="36" height="28" rx="2" fill="#0891b2" opacity="0.9" stroke="#22d3ee" stroke-width="0.8"/>
+  <rect x="140" y="110" width="36" height="28" rx="2" fill="#f59e0b" opacity="0.75" stroke="#fbbf24" stroke-width="0.8"/>
+  <rect x="180" y="110" width="36" height="28" rx="2" fill="#0891b2" opacity="0.85" stroke="#22d3ee" stroke-width="0.8"/>
+  <rect x="220" y="110" width="36" height="28" rx="2" fill="#0891b2" opacity="0.9" stroke="#22d3ee" stroke-width="0.8"/>
+  <rect x="260" y="110" width="36" height="28" rx="2" fill="#ef4444" opacity="0.7" stroke="#f87171" stroke-width="0.8"/>
+  <rect x="300" y="110" width="36" height="28" rx="2" fill="#0891b2" opacity="0.8" stroke="#22d3ee" stroke-width="0.8"/>
+  <!-- Row 1 -->
+  <rect x="60"  y="143" width="36" height="28" rx="2" fill="#0891b2" opacity="0.9"/>
+  <rect x="100" y="143" width="36" height="28" rx="2" fill="#ef4444" opacity="0.65" stroke="#f87171" stroke-width="0.8"/>
+  <rect x="140" y="143" width="36" height="28" rx="2" fill="#0891b2" opacity="0.85"/>
+  <rect x="180" y="143" width="36" height="28" rx="2" fill="#0891b2" opacity="0.9"/>
+  <rect x="220" y="143" width="36" height="28" rx="2" fill="#f59e0b" opacity="0.7" stroke="#fbbf24" stroke-width="0.8"/>
+  <rect x="260" y="143" width="36" height="28" rx="2" fill="#0891b2" opacity="0.85"/>
+  <rect x="300" y="143" width="36" height="28" rx="2" fill="#0891b2" opacity="0.9"/>
+  <!-- Row 2 -->
+  <rect x="60"  y="176" width="36" height="28" rx="2" fill="#f59e0b" opacity="0.7" stroke="#fbbf24" stroke-width="0.8"/>
+  <rect x="100" y="176" width="36" height="28" rx="2" fill="#0891b2" opacity="0.9"/>
+  <rect x="140" y="176" width="36" height="28" rx="2" fill="#0891b2" opacity="0.85"/>
+  <rect x="180" y="176" width="36" height="28" rx="2" fill="#ef4444" opacity="0.7" stroke="#f87171" stroke-width="0.8"/>
+  <rect x="220" y="176" width="36" height="28" rx="2" fill="#0891b2" opacity="0.9"/>
+  <rect x="260" y="176" width="36" height="28" rx="2" fill="#0891b2" opacity="0.85"/>
+  <rect x="300" y="176" width="36" height="28" rx="2" fill="#f59e0b" opacity="0.65" stroke="#fbbf24" stroke-width="0.8"/>
+  <!-- Row 3 -->
+  <rect x="60"  y="209" width="36" height="28" rx="2" fill="#0891b2" opacity="0.85"/>
+  <rect x="100" y="209" width="36" height="28" rx="2" fill="#0891b2" opacity="0.9"/>
+  <rect x="140" y="209" width="36" height="28" rx="2" fill="#f59e0b" opacity="0.7" stroke="#fbbf24" stroke-width="0.8"/>
+  <rect x="180" y="209" width="36" height="28" rx="2" fill="#0891b2" opacity="0.85"/>
+  <rect x="220" y="209" width="36" height="28" rx="2" fill="#0891b2" opacity="0.9"/>
+  <rect x="260" y="209" width="36" height="28" rx="2" fill="#0891b2" opacity="0.85"/>
+  <rect x="300" y="209" width="36" height="28" rx="2" fill="#ef4444" opacity="0.65" stroke="#f87171" stroke-width="0.8"/>
+
+  <!-- Legend -->
+  <rect x="60" y="255" width="14" height="14" rx="2" fill="#0891b2" opacity="0.9"/>
+  <text x="78" y="266" font-family="system-ui,sans-serif" font-size="9" fill="#67e8f9">Nominal</text>
+  <rect x="130" y="255" width="14" height="14" rx="2" fill="#f59e0b" opacity="0.8"/>
+  <text x="148" y="266" font-family="system-ui,sans-serif" font-size="9" fill="#fcd34d">Minor noise</text>
+  <rect x="220" y="255" width="14" height="14" rx="2" fill="#ef4444" opacity="0.8"/>
+  <text x="238" y="266" font-family="system-ui,sans-serif" font-size="9" fill="#fca5a5">Critical noise</text>
+
+  <!-- "1 LSB noise" warning -->
+  <rect x="55" y="278" width="300" height="28" rx="5" fill="#3d1a00" opacity="0.85" stroke="#f59e0b" stroke-width="1"/>
+  <text x="205" y="292" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#fcd34d" text-anchor="middle">Even 1 LSB noise → Major accuracy drop</text>
+  <text x="205" y="302" font-family="system-ui,sans-serif" font-size="9" fill="#fbbf24" text-anchor="middle" opacity="0.8">especially on ImageNet-scale tasks</text>
+
+  <!-- Right panel: accuracy vs noise + mitigations -->
+  <rect x="400" y="75" width="360" height="260" rx="8" fill="#0a1e28" stroke="#22d3ee" stroke-width="1.2" opacity="0.9"/>
+  <text x="580" y="98" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#67e8f9" text-anchor="middle">ASiM Analysis &amp; Mitigations</text>
+
+  <!-- Accuracy degradation bars -->
+  <text x="420" y="125" font-family="monospace" font-size="10" fill="#a5f3fc">0 LSB (ideal)</text>
+  <rect x="520" y="114" width="200" height="16" rx="3" fill="#0891b2" opacity="0.9"/>
+  <text x="725" y="126" font-family="monospace" font-size="10" fill="#22d3ee">95%</text>
+
+  <text x="420" y="153" font-family="monospace" font-size="10" fill="#fcd34d">1 LSB noise</text>
+  <rect x="520" y="142" width="100" height="16" rx="3" fill="#f59e0b" opacity="0.85"/>
+  <text x="725" y="154" font-family="monospace" font-size="10" fill="#fbbf24">48%</text>
+
+  <text x="420" y="181" font-family="monospace" font-size="10" fill="#fca5a5">2 LSB noise</text>
+  <rect x="520" y="170" width="40" height="16" rx="3" fill="#ef4444" opacity="0.8"/>
+  <text x="725" y="182" font-family="monospace" font-size="10" fill="#f87171">19%</text>
+
+  <!-- Mitigation strategies -->
+  <rect x="415" y="200" width="328" height="30" rx="5" fill="#0a2a30" opacity="0.9" stroke="#0891b2" stroke-width="0.8"/>
+  <text x="579" y="213" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#67e8f9" text-anchor="middle">Mitigation: Hybrid Analog-Digital</text>
+  <text x="579" y="225" font-family="system-ui,sans-serif" font-size="9" fill="#a5f3fc" text-anchor="middle" opacity="0.8">critical rows fall back to digital CiM</text>
+
+  <rect x="415" y="238" width="328" height="30" rx="5" fill="#0a2a30" opacity="0.9" stroke="#0891b2" stroke-width="0.8"/>
+  <text x="579" y="251" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#67e8f9" text-anchor="middle">Mitigation: Majority Voting</text>
+  <text x="579" y="263" font-family="system-ui,sans-serif" font-size="9" fill="#a5f3fc" text-anchor="middle" opacity="0.8">repeated analog reads for noise averaging</text>
+
+  <!-- Framework badge -->
+  <rect x="415" y="276" width="328" height="30" rx="5" fill="#065f46" opacity="0.8" stroke="#34d399" stroke-width="0.8"/>
+  <text x="579" y="289" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#a7f3d0" text-anchor="middle">Open-Source Simulation Framework</text>
+  <text x="579" y="301" font-family="system-ui,sans-serif" font-size="9" fill="#6ee7b7" text-anchor="middle" opacity="0.8">ResNet / ViT · CIFAR-10 / ImageNet</text>
+
+  <!-- Title -->
+  <text x="400" y="383" font-family="system-ui,-apple-system,sans-serif" font-size="46" font-weight="800" fill="white" text-anchor="middle" opacity="0.95">ASiM</text>
+  <text x="400" y="413" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#67e8f9" text-anchor="middle">Analog CiM Inference Accuracy Modeling</text>
+  <text x="400" y="435" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#0891b2" text-anchor="middle" letter-spacing="2">IEEE TVLSI 2025</text>
+</svg>

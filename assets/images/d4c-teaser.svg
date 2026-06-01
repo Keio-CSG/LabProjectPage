@@ -1,0 +1,116 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050d1a"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="25%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="75%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <ellipse cx="200" cy="225" rx="220" ry="200" fill="url(#glow1)"/>
+  <ellipse cx="600" cy="225" rx="220" ry="200" fill="url(#glow2)"/>
+
+  <!-- CLIP Model (left) -->
+  <rect x="40" y="90" width="200" height="240" rx="8" fill="#0f1e30" stroke="#f59e0b" stroke-width="1.2" opacity="0.9"/>
+  <text x="140" y="113" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fcd34d" text-anchor="middle">CLIP Model</text>
+
+  <!-- Image encoder block -->
+  <rect x="60" y="125" width="160" height="55" rx="5" fill="#1c2f47" opacity="0.9"/>
+  <text x="140" y="148" font-family="system-ui,sans-serif" font-size="10" fill="#fcd34d" text-anchor="middle" font-weight="600">Image Encoder</text>
+  <!-- Mini image grid -->
+  <rect x="70" y="155" width="14" height="14" rx="1" fill="#f59e0b" opacity="0.6"/>
+  <rect x="87" y="155" width="14" height="14" rx="1" fill="#3b82f6" opacity="0.6"/>
+  <rect x="104" y="155" width="14" height="14" rx="1" fill="#10b981" opacity="0.6"/>
+  <rect x="121" y="155" width="14" height="14" rx="1" fill="#f59e0b" opacity="0.5"/>
+  <rect x="138" y="155" width="14" height="14" rx="1" fill="#3b82f6" opacity="0.5"/>
+  <rect x="155" y="155" width="14" height="14" rx="1" fill="#10b981" opacity="0.5"/>
+  <text x="190" y="162" font-family="monospace" font-size="9" fill="#f59e0b" opacity="0.7">E_I</text>
+
+  <!-- Connector -->
+  <line x1="140" y1="180" x2="140" y2="198" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+
+  <!-- Text encoder block -->
+  <rect x="60" y="200" width="160" height="55" rx="5" fill="#1c2f47" opacity="0.9"/>
+  <text x="140" y="222" font-family="system-ui,sans-serif" font-size="10" fill="#fcd34d" text-anchor="middle" font-weight="600">Text Encoder</text>
+  <text x="140" y="240" font-family="monospace" font-size="9" fill="#f59e0b" text-anchor="middle" opacity="0.8">"a photo of a cat"</text>
+  <text x="190" y="235" font-family="monospace" font-size="9" fill="#f59e0b" opacity="0.7">E_T</text>
+
+  <!-- Contrastive loss -->
+  <rect x="65" y="268" width="150" height="24" rx="4" fill="#2d1c00" opacity="0.8" stroke="#f59e0b" stroke-width="0.8"/>
+  <text x="140" y="284" font-family="system-ui,sans-serif" font-size="10" fill="#fcd34d" text-anchor="middle">Contrastive Loss</text>
+
+  <!-- FP32 label -->
+  <rect x="60" y="302" width="74" height="18" rx="3" fill="#1c2f47"/>
+  <text x="97" y="315" font-family="monospace" font-size="10" fill="#f59e0b" text-anchor="middle">FP32</text>
+  <!-- Arrow down to quantized -->
+  <line x1="140" y1="320" x2="140" y2="340" stroke="#f59e0b" stroke-width="1.5" opacity="0.7"/>
+  <polygon points="134,336 140,348 146,336" fill="#f59e0b" opacity="0.7"/>
+
+  <!-- D4C synthesizer (center) -->
+  <rect x="280" y="130" width="230" height="190" rx="8" fill="#0f1e30" stroke="#a78bfa" stroke-width="1.5" opacity="0.9"/>
+  <text x="395" y="153" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#c4b5fd" text-anchor="middle">D4C Framework</text>
+
+  <!-- 3 components -->
+  <rect x="295" y="163" width="200" height="28" rx="4" fill="#1e1b4b" opacity="0.85"/>
+  <text x="395" y="175" font-family="system-ui,sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle" font-weight="600">① Prompt-Guided Semantic Alignment</text>
+  <text x="395" y="186" font-family="system-ui,sans-serif" font-size="8" fill="#a78bfa" text-anchor="middle" opacity="0.8">rich category coverage</text>
+
+  <rect x="295" y="198" width="200" height="28" rx="4" fill="#1e1b4b" opacity="0.85"/>
+  <text x="395" y="210" font-family="system-ui,sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle" font-weight="600">② Structural Contrastive Generation</text>
+  <text x="395" y="221" font-family="system-ui,sans-serif" font-size="8" fill="#a78bfa" text-anchor="middle" opacity="0.8">compositional diversity</text>
+
+  <rect x="295" y="233" width="200" height="28" rx="4" fill="#1e1b4b" opacity="0.85"/>
+  <text x="395" y="245" font-family="system-ui,sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle" font-weight="600">③ Perturbation-Aware Enhancement</text>
+  <text x="395" y="256" font-family="system-ui,sans-serif" font-size="8" fill="#a78bfa" text-anchor="middle" opacity="0.8">robustness to noise</text>
+
+  <!-- No data badge -->
+  <rect x="295" y="272" width="200" height="30" rx="5" fill="#2e1065" opacity="0.9" stroke="#7c3aed" stroke-width="0.8"/>
+  <text x="395" y="288" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#c4b5fd" text-anchor="middle">Data-Free — No Training Set</text>
+  <text x="395" y="300" font-family="system-ui,sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle" opacity="0.8">Synthesized calibration only</text>
+
+  <!-- Arrow -->
+  <line x1="244" y1="225" x2="278" y2="225" stroke="#a78bfa" stroke-width="2" opacity="0.8"/>
+  <polygon points="278,219 292,225 278,231" fill="#a78bfa" opacity="0.8"/>
+
+  <!-- Arrow to quantized -->
+  <line x1="512" y1="225" x2="548" y2="225" stroke="#3b82f6" stroke-width="2" opacity="0.8"/>
+  <polygon points="548,219 562,225 548,231" fill="#3b82f6" opacity="0.8"/>
+
+  <!-- Quantized CLIP (right) -->
+  <rect x="560" y="90" width="200" height="240" rx="8" fill="#0f1e30" stroke="#3b82f6" stroke-width="1.2" opacity="0.9"/>
+  <text x="660" y="113" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#93c5fd" text-anchor="middle">Quantized CLIP</text>
+
+  <!-- W4A4 badge -->
+  <rect x="585" y="125" width="150" height="36" rx="6" fill="#1e3a5f" opacity="0.9"/>
+  <text x="660" y="143" font-family="system-ui,sans-serif" font-size="18" font-weight="800" fill="#3b82f6" text-anchor="middle">W4A4</text>
+  <text x="660" y="156" font-family="system-ui,sans-serif" font-size="9" fill="#93c5fd" text-anchor="middle">4-bit Weights &amp; Activations</text>
+
+  <!-- Compressed size -->
+  <rect x="585" y="170" width="150" height="30" rx="4" fill="#1e3a5f" opacity="0.8"/>
+  <text x="660" y="186" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#93c5fd" text-anchor="middle">8× Compression</text>
+  <text x="660" y="197" font-family="system-ui,sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle" opacity="0.8">vs FP32 baseline</text>
+
+  <!-- Accuracy preserved -->
+  <rect x="585" y="210" width="150" height="45" rx="4" fill="#0f2a45" opacity="0.85" stroke="#3b82f6" stroke-width="0.8"/>
+  <text x="660" y="228" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#93c5fd" text-anchor="middle">Zero-Shot Accuracy</text>
+  <text x="660" y="244" font-family="system-ui,sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">Preserved on</text>
+  <text x="660" y="256" font-family="system-ui,sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">ImageNet · COCO</text>
+
+  <!-- Deployment -->
+  <rect x="585" y="265" width="150" height="45" rx="4" fill="#1e3a5f" opacity="0.8"/>
+  <text x="660" y="282" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#93c5fd" text-anchor="middle">Edge Deployment</text>
+  <text x="660" y="296" font-family="system-ui,sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle" opacity="0.85">Vision-Language on Device</text>
+  <text x="660" y="307" font-family="system-ui,sans-serif" font-size="9" fill="#60a5fa" text-anchor="middle" opacity="0.7">w/o training data access</text>
+
+  <!-- Title -->
+  <text x="400" y="380" font-family="system-ui,-apple-system,sans-serif" font-size="48" font-weight="800" fill="white" text-anchor="middle" opacity="0.95">D4C</text>
+  <text x="400" y="410" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#c4b5fd" text-anchor="middle">Data-Free Quantization for CLIP</text>
+  <text x="400" y="432" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#a78bfa" text-anchor="middle" letter-spacing="2">CVPR Findings 2026</text>
+</svg>
