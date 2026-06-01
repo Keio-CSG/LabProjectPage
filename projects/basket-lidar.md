@@ -27,7 +27,7 @@ tags:
   - LiDAR
   - Sports
 links:
-  project: https://sites.google.com/keio.jp/keio-csg/projects
+  project: https://sites.google.com/keio.jp/keio-csg/projects/basket-lidar
 ---
 
 3D basketball player tracking using LiDAR sensing for sports analytics.

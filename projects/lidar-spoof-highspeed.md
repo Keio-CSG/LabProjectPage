@@ -26,6 +26,11 @@ authors:
 tags:
   - LiDAR
   - Security
+links:
+  project: https://sites.google.com/keio.jp/keio-csg/projects/AttackonDrivingVehicle
+  paper: https://www.ndss-symposium.org/wp-content/uploads/2025-628-paper.pdf
+  press: https://www.jst.go.jp/pr/announce/20250225-2/pdf/20250225-2.pdf
+
 ---
 
 Examines the practical feasibility of LiDAR spoofing attacks on autonomous driving vehicles

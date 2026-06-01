@@ -1,36 +1,118 @@
-<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+﻿<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f0a1e"/>
+      <stop offset="0%" stop-color="#0d0618"/>
       <stop offset="100%" stop-color="#1a0a2e"/>
     </linearGradient>
-    <radialGradient id="pulse" cx="50%" cy="55%" r="50%">
+    <radialGradient id="glow1" cx="20%" cy="50%" r="35%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="80%" cy="50%" r="35%">
       <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <rect width="800" height="450" fill="url(#bg)"/>
-  <ellipse cx="400" cy="248" rx="340" ry="240" fill="url(#pulse)"/>
-  <!-- Pulse rings -->
-  <circle cx="400" cy="248" r="40" fill="none" stroke="#a78bfa" stroke-width="2.5" opacity="0.9"/>
-  <circle cx="400" cy="248" r="80" fill="none" stroke="#8b5cf6" stroke-width="1.8" opacity="0.7"/>
-  <circle cx="400" cy="248" r="125" fill="none" stroke="#7c3aed" stroke-width="1.4" opacity="0.5"/>
-  <circle cx="400" cy="248" r="175" fill="none" stroke="#6d28d9" stroke-width="1" opacity="0.35"/>
-  <circle cx="400" cy="248" r="230" fill="none" stroke="#5b21b6" stroke-width="0.8" opacity="0.22"/>
-  <circle cx="400" cy="248" r="290" fill="none" stroke="#4c1d95" stroke-width="0.6" opacity="0.15"/>
-  <!-- Center sensor -->
-  <circle cx="400" cy="248" r="12" fill="#c4b5fd" opacity="0.95"/>
-  <circle cx="400" cy="248" r="6" fill="#fff" opacity="0.9"/>
-  <!-- Attack beam (blocked) -->
-  <line x1="650" y1="100" x2="440" y2="236" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="8 5" opacity="0.7"/>
-  <circle cx="650" cy="100" r="8" fill="#ef4444" opacity="0.8"/>
-  <!-- Shield indicator -->
-  <path d="M 400 215 L 420 225 L 420 255 Q 420 275 400 285 Q 380 275 380 255 L 380 225 Z" fill="#7c3aed" opacity="0.35"/>
-  <path d="M 400 215 L 420 225 L 420 255 Q 420 275 400 285 Q 380 275 380 255 L 380 225 Z" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.7"/>
-  <!-- Title -->
-  <text x="400" y="118" font-family="system-ui,-apple-system,sans-serif" font-size="46" font-weight="800" fill="white" text-anchor="middle" opacity="0.95">PULSAR-Net</text>
-  <text x="400" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="17" fill="#c4b5fd" text-anchor="middle" letter-spacing="2">CVPR 2026</text>
-  <!-- Blocked label -->
-  <rect x="605" y="75" width="68" height="20" rx="4" fill="#ef4444" opacity="0.85"/>
-  <text x="639" y="89" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">BLOCKED</text>
+  <ellipse cx="160" cy="225" rx="200" ry="180" fill="url(#glow1)"/>
+  <ellipse cx="640" cy="225" rx="200" ry="180" fill="url(#glow2)"/>
+  <rect x="30" y="70" width="220" height="240" rx="8" fill="#1a0a1e" stroke="#ef4444" stroke-width="1.2" opacity="0.9"/>
+  <text x="140" y="93" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fca5a5" text-anchor="middle">Jammed Point Cloud</text>
+  <circle cx="65" cy="115" r="2" fill="#ef4444" opacity="0.7"/>
+  <circle cx="95" cy="108" r="2" fill="#f87171" opacity="0.7"/>
+  <circle cx="125" cy="125" r="2" fill="#ef4444" opacity="0.8"/>
+  <circle cx="80" cy="140" r="2" fill="#fca5a5" opacity="0.7"/>
+  <circle cx="150" cy="112" r="2" fill="#ef4444" opacity="0.7"/>
+  <circle cx="175" cy="128" r="2" fill="#f87171" opacity="0.8"/>
+  <circle cx="205" cy="120" r="2" fill="#ef4444" opacity="0.7"/>
+  <circle cx="225" cy="135" r="2" fill="#fca5a5" opacity="0.7"/>
+  <circle cx="60" cy="155" r="2" fill="#f87171" opacity="0.8"/>
+  <circle cx="95" cy="160" r="2" fill="#ef4444" opacity="0.7"/>
+  <circle cx="125" cy="148" r="2" fill="#fca5a5" opacity="0.7"/>
+  <circle cx="160" cy="165" r="2" fill="#ef4444" opacity="0.8"/>
+  <circle cx="190" cy="152" r="2" fill="#f87171" opacity="0.7"/>
+  <circle cx="220" cy="162" r="2" fill="#ef4444" opacity="0.7"/>
+  <circle cx="70" cy="178" r="2" fill="#ef4444" opacity="0.8"/>
+  <circle cx="105" cy="185" r="2" fill="#fca5a5" opacity="0.7"/>
+  <circle cx="135" cy="175" r="2" fill="#f87171" opacity="0.7"/>
+  <circle cx="170" cy="188" r="2" fill="#ef4444" opacity="0.8"/>
+  <circle cx="200" cy="178" r="2" fill="#fca5a5" opacity="0.7"/>
+  <circle cx="230" cy="185" r="2" fill="#ef4444" opacity="0.7"/>
+  <circle cx="75" cy="205" r="2" fill="#f87171" opacity="0.8"/>
+  <circle cx="110" cy="215" r="2" fill="#ef4444" opacity="0.7"/>
+  <circle cx="145" cy="202" r="2" fill="#fca5a5" opacity="0.7"/>
+  <circle cx="180" cy="212" r="2" fill="#ef4444" opacity="0.8"/>
+  <circle cx="212" cy="205" r="2" fill="#f87171" opacity="0.7"/>
+  <circle cx="60" cy="230" r="2" fill="#ef4444" opacity="0.7"/>
+  <circle cx="92" cy="238" r="2" fill="#fca5a5" opacity="0.8"/>
+  <circle cx="125" cy="228" r="2" fill="#ef4444" opacity="0.7"/>
+  <circle cx="158" cy="240" r="2" fill="#f87171" opacity="0.7"/>
+  <circle cx="190" cy="232" r="2" fill="#ef4444" opacity="0.8"/>
+  <circle cx="222" cy="242" r="2" fill="#fca5a5" opacity="0.7"/>
+  <rect x="50" y="258" width="180" height="24" rx="4" fill="#450a0a" stroke="#ef4444" stroke-width="1" opacity="0.9"/>
+  <text x="140" y="274" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#fca5a5" text-anchor="middle">No car detected!</text>
+  <rect x="270" y="130" width="260" height="175" rx="8" fill="#0f0820" stroke="#8b5cf6" stroke-width="1.5" opacity="0.9"/>
+  <text x="400" y="155" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#c4b5fd" text-anchor="middle">PULSAR-Net</text>
+  <text x="400" y="172" font-family="system-ui,sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle" opacity="0.8">Full-Waveform Segmentation</text>
+  <polyline points="282,210 295,207 305,184 315,207 325,205 335,182 345,206 355,188 365,207 375,204 385,182 395,206 405,207 415,184 425,207" fill="none" stroke="#ef4444" stroke-width="1.5" opacity="0.8"/>
+  <polyline points="282,210 295,209 305,196 315,210 325,209 335,196 345,210 355,200 365,210 375,208 385,196 395,209 405,210 415,197 425,210" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.9"/>
+  <text x="309" y="181" font-family="system-ui,sans-serif" font-size="9" fill="#ef4444" opacity="0.9">x</text>
+  <text x="333" y="179" font-family="system-ui,sans-serif" font-size="9" fill="#ef4444" opacity="0.9">x</text>
+  <text x="389" y="179" font-family="system-ui,sans-serif" font-size="9" fill="#ef4444" opacity="0.9">x</text>
+  <text x="419" y="181" font-family="system-ui,sans-serif" font-size="9" fill="#ef4444" opacity="0.9">x</text>
+  <rect x="282" y="225" width="196" height="32" rx="4" fill="#1a0a2e" opacity="0.9"/>
+  <text x="380" y="239" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#c4b5fd" text-anchor="middle">Simultaneous Laser Sensing</text>
+  <text x="380" y="251" font-family="system-ui,sans-serif" font-size="8" fill="#a78bfa" text-anchor="middle" opacity="0.8">attack identical across receivers</text>
+  <rect x="282" y="267" width="196" height="20" rx="3" fill="#2e1065" opacity="0.8"/>
+  <text x="380" y="281" font-family="system-ui,sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle">3D U-Net + Axial Attention</text>
+  <line x1="252" y1="210" x2="268" y2="215" stroke="#8b5cf6" stroke-width="2" opacity="0.8"/>
+  <polygon points="264,220 270,215 264,210" fill="#8b5cf6" opacity="0.8"/>
+  <line x1="532" y1="215" x2="548" y2="210" stroke="#8b5cf6" stroke-width="2" opacity="0.8"/>
+  <polygon points="542,205 548,210 542,215" fill="#8b5cf6" opacity="0.8"/>
+  <rect x="550" y="70" width="220" height="240" rx="8" fill="#0d0618" stroke="#8b5cf6" stroke-width="1.2" opacity="0.9"/>
+  <text x="660" y="93" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#c4b5fd" text-anchor="middle">Reconstructed PCD</text>
+  <circle cx="580" cy="232" r="2" fill="#8b5cf6" opacity="0.9"/>
+  <circle cx="600" cy="232" r="2" fill="#a78bfa" opacity="0.95"/>
+  <circle cx="620" cy="232" r="2" fill="#a78bfa" opacity="0.9"/>
+  <circle cx="640" cy="232" r="2" fill="#8b5cf6" opacity="0.95"/>
+  <circle cx="660" cy="232" r="2" fill="#8b5cf6" opacity="0.9"/>
+  <circle cx="680" cy="232" r="2" fill="#a78bfa" opacity="0.95"/>
+  <circle cx="700" cy="232" r="2" fill="#8b5cf6" opacity="0.9"/>
+  <circle cx="720" cy="232" r="2" fill="#a78bfa" opacity="0.95"/>
+  <circle cx="585" cy="217" r="2" fill="#8b5cf6" opacity="0.85"/>
+  <circle cx="603" cy="217" r="2.5" fill="#c4b5fd" opacity="1.0"/>
+  <circle cx="622" cy="217" r="2.5" fill="#c4b5fd" opacity="1.0"/>
+  <circle cx="641" cy="217" r="2.5" fill="#a78bfa" opacity="0.95"/>
+  <circle cx="660" cy="217" r="2.5" fill="#c4b5fd" opacity="1.0"/>
+  <circle cx="679" cy="217" r="2" fill="#c4b5fd" opacity="0.95"/>
+  <circle cx="698" cy="217" r="2" fill="#a78bfa" opacity="0.9"/>
+  <circle cx="715" cy="217" r="2" fill="#8b5cf6" opacity="0.85"/>
+  <circle cx="608" cy="202" r="2" fill="#8b5cf6" opacity="0.8"/>
+  <circle cx="625" cy="198" r="2.5" fill="#a78bfa" opacity="0.9"/>
+  <circle cx="642" cy="195" r="2.5" fill="#c4b5fd" opacity="0.95"/>
+  <circle cx="659" cy="195" r="2.5" fill="#c4b5fd" opacity="0.95"/>
+  <circle cx="676" cy="198" r="2" fill="#a78bfa" opacity="0.9"/>
+  <circle cx="693" cy="202" r="2" fill="#8b5cf6" opacity="0.8"/>
+  <circle cx="622" cy="207" r="2" fill="#ddd6fe" opacity="0.9"/>
+  <circle cx="641" cy="205" r="2" fill="#ddd6fe" opacity="0.9"/>
+  <circle cx="660" cy="207" r="2" fill="#ddd6fe" opacity="0.9"/>
+  <rect x="580" y="186" width="155" height="53" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.85"/>
+  <rect x="580" y="186" width="32" height="12" rx="2" fill="#5b21b6" opacity="0.9"/>
+  <text x="596" y="196" font-family="system-ui,sans-serif" font-size="8" fill="#c4b5fd" text-anchor="middle">Car</text>
+  <rect x="560" y="258" width="190" height="24" rx="4" fill="#1e1040" stroke="#8b5cf6" stroke-width="1" opacity="0.9"/>
+  <text x="655" y="274" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#c4b5fd" text-anchor="middle">92% static / 73% driving</text>
+  <rect x="30" y="328" width="740" height="42" rx="6" fill="#0f0820" stroke="#8b5cf6" stroke-width="1" opacity="0.85"/>
+  <text x="128" y="347" font-family="system-ui,sans-serif" font-size="10" fill="#a78bfa" text-anchor="middle" font-weight="600">First vs. jamming attacks</text>
+  <text x="128" y="361" font-family="system-ui,sans-serif" font-size="9" fill="#8b5cf6" text-anchor="middle" opacity="0.8">previously impossible</text>
+  <line x1="248" y1="333" x2="248" y2="365" stroke="#4c1d95" stroke-width="1" opacity="0.6"/>
+  <text x="358" y="347" font-family="system-ui,sans-serif" font-size="10" fill="#a78bfa" text-anchor="middle" font-weight="600">Synthetic-to-real transfer</text>
+  <text x="358" y="361" font-family="system-ui,sans-serif" font-size="9" fill="#8b5cf6" text-anchor="middle" opacity="0.8">trained on sim, tested on production HW</text>
+  <line x1="470" y1="333" x2="470" y2="365" stroke="#4c1d95" stroke-width="1" opacity="0.6"/>
+  <text x="565" y="347" font-family="system-ui,sans-serif" font-size="10" fill="#a78bfa" text-anchor="middle" font-weight="600">U-Net + Axial Attention</text>
+  <text x="565" y="361" font-family="system-ui,sans-serif" font-size="9" fill="#8b5cf6" text-anchor="middle" opacity="0.8">DWSep 3D conv, 31.74 FPS</text>
+  <line x1="660" y1="333" x2="660" y2="365" stroke="#4c1d95" stroke-width="1" opacity="0.6"/>
+  <text x="725" y="347" font-family="system-ui,sans-serif" font-size="10" fill="#a78bfa" text-anchor="middle" font-weight="600">arXiv 2026</text>
+  <text x="725" y="361" font-family="system-ui,sans-serif" font-size="9" fill="#8b5cf6" text-anchor="middle" opacity="0.8">2604.00371</text>
+  <text x="400" y="405" font-family="system-ui,-apple-system,sans-serif" font-size="30" font-weight="800" fill="white" text-anchor="middle" opacity="0.95">PULSAR-Net</text>
+  <text x="400" y="430" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#a78bfa" text-anchor="middle">LiDAR Jamming Defense via Full-Waveform and Simultaneous Sensing</text>
 </svg>
