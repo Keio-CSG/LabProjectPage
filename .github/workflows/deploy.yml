@@ -34,15 +34,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build
-
-      - name: Prepare site output
-        run: |
-          mkdir -p _site
-          cp index.html _site/
-          cp -r assets _site/
-          cp -r logo _site/
-          cp -r projects _site/
+        run: node build.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -50,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '_site'
+          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
