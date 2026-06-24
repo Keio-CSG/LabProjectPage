@@ -57,18 +57,19 @@
         <button class="filter-btn active" data-venue="all">All</button>
     <button class="filter-btn" data-venue="CVPR">CVPR</button>
     <button class="filter-btn" data-venue="arXiv">arXiv</button>
+    <button class="filter-btn" data-venue="IROS">IROS</button>
     <button class="filter-btn" data-venue="Sensors J.">Sensors J.</button>
-    <button class="filter-btn" data-venue="MMSports">MMSports</button>
-    <button class="filter-btn" data-venue="NDSS">NDSS</button>
     <button class="filter-btn" data-venue="ICRA">ICRA</button>
     <button class="filter-btn" data-venue="RA-L">RA-L</button>
+    <button class="filter-btn" data-venue="NDSS">NDSS</button>
+    <button class="filter-btn" data-venue="MMSports">MMSports</button>
     <button class="filter-btn" data-venue="TVLSI">TVLSI</button>
     <button class="filter-btn" data-venue="CVPR Findings">CVPR Findings</button>
     <button class="filter-btn" data-venue="ASP-DAC">ASP-DAC</button>
-    <button class="filter-btn" data-venue="ICCV">ICCV</button>
     <button class="filter-btn" data-venue="ESSERC">ESSERC</button>
-    <button class="filter-btn" data-venue="ISSCC">ISSCC</button>
+    <button class="filter-btn" data-venue="ICCV">ICCV</button>
     <button class="filter-btn" data-venue="ICCAD">ICCAD</button>
+    <button class="filter-btn" data-venue="ISSCC">ISSCC</button>
       </div>
     </div>
   </div>
@@ -121,6 +122,26 @@ rates for vehicles erased by attacks in real-world static and driving scenarios 
     <div class="card-links"><a href="https://arxiv.org/abs/2604.00371" class="link-badge link-arxiv" target="_blank" rel="noopener" aria-label="arXiv"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><text x="1" y="17" font-family="serif" font-size="13" font-weight="bold" fill="white">ar</text></svg></span><span class="badge-label">arXiv</span></a></div>
   </div>
 </article>
+<article class="project-card" data-tags="LiDAR, Security" data-venue="IROS" data-highlight="false">
+  <div class="card-teaser">
+    <img src="assets/images/mirrordrift-teaser.svg" alt="MirrorDrift: Actuated Mirror-Based Attacks on LiDAR SLAM teaser" loading="lazy" />
+  </div>
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="badge badge-venue badge-iros">IROS 2026</span>
+      <span class="badge badge-status badge-accepted">Accepted</span>
+    </div>
+    <h2 class="card-title">MirrorDrift</h2>
+    <p class="card-authors"><strong>R. Nagata</strong>, K. Koide, <strong>K. Ikeda</strong>, <strong>O. Sako</strong>, <strong>S. Horie</strong>, <strong>K. Yoshioka</strong></p>
+    <p class="card-description">MirrorDrift introduces a novel physical attack on LiDAR SLAM using an actuated mirror
+to reflect and redirect laser pulses, injecting controlled ghost reflections into the sensor.
+By precisely controlling the mirror orientation, an adversary can cause persistent
+localization drift without direct line-of-sight to the target vehicle.</p>
+    
+    <div class="card-tags"><span class="tag">LiDAR</span><span class="tag">Security</span></div>
+    <div class="card-links"><a href="https://arxiv.org/abs/2603.11364" class="link-badge link-arxiv" target="_blank" rel="noopener" aria-label="arXiv"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><text x="1" y="17" font-family="serif" font-size="13" font-weight="bold" fill="white">ar</text></svg></span><span class="badge-label">arXiv</span></a></div>
+  </div>
+</article>
 <article class="project-card" data-tags="LiDAR, Localization, Construction" data-venue="Sensors J." data-highlight="false">
   <div class="card-teaser">
     <img src="assets/images/lidar-beacon-teaser.svg" alt="LiDAR Beacon: A Long-Range LiDAR Fiducial Marker for GPS-Free Autonomous Localization of Construction Machinery teaser" loading="lazy" />
@@ -141,43 +162,25 @@ of construction machinery in GPS-denied environments such as tunnels and open te
     <div class="card-links"><a href="https://ieeexplore.ieee.org/document/11410042/" class="link-badge link-paper" target="_blank" rel="noopener" aria-label="Paper"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8.5 15.5h-1v-4h1.3c.8 0 1.2.5 1.2 1.1 0 .7-.5 1.1-1.3 1.1H8.5v1.8zm0-2.6h.2c.3 0 .5-.1.5-.4 0-.3-.2-.4-.5-.4H8.5v.8zm3.5 2.6h-1v-4h1c1.1 0 1.8.7 1.8 2s-.7 2-1.8 2zm0-3.2h-.1v2.4h.1c.5 0 .9-.3.9-1.2 0-.9-.4-1.2-.9-1.2zm3.5 3.2h-1v-4h2.3v.8H15v.9h1.2v.7H15v1.6z"/></svg></span><span class="badge-label">Paper</span></a><a href="https://www.keio.ac.jp/ja/press-release/20260324-1/" class="link-badge link-press" target="_blank" rel="noopener" aria-label="Press"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3h2v13a2 2 0 0 1-2 2H4zm14-2h2V9h-2v11zM4 4v16h12V4H4zm2 4h8v2H6V8zm0 4h8v2H6v-2zm0 4h5v2H6v-2z"/></svg></span><span class="badge-label">Press</span></a></div>
   </div>
 </article>
-<article class="project-card" data-tags="LiDAR, Sports" data-venue="MMSports" data-highlight="false">
+<article class="project-card" data-tags="LiDAR, Security" data-venue="IROS" data-highlight="false">
   <div class="card-teaser">
-    <img src="assets/images/basket-lidar-teaser.svg" alt="Basket LiDAR: 3D Basketball Player Tracking via LiDAR Sensing teaser" loading="lazy" />
+    <img src="assets/images/d-slamspoof-teaser.svg" alt="D-SLAMSpoof: An Environment-Agnostic LiDAR Spoofing Attack using Dynamic Point Cloud Injection teaser" loading="lazy" />
   </div>
   <div class="card-body">
     <div class="card-meta">
-      <span class="badge badge-venue badge-mmsports">MMSports 2025</span>
-      <span class="badge badge-status badge-published">Published</span>
+      <span class="badge badge-venue badge-iros">IROS 2026</span>
+      <span class="badge badge-status badge-accepted">Accepted</span>
     </div>
-    <h2 class="card-title">Basket LiDAR</h2>
-    <p class="card-authors"><strong>R. Hayashi</strong>, <strong>K. Torimi</strong>, <strong>R. Nagata</strong>, <strong>K. Ikeda</strong>, <strong>O. Sako</strong>, T. Nakamura, M. Tani, Y. Aoki, <strong>K. Yoshioka</strong></p>
-    <p class="card-description">3D basketball player tracking using LiDAR sensing for sports analytics.
-Enables precise real-time localization of players and ball during games,
-providing rich spatial data for performance analysis and coaching insights.</p>
-    <p class="card-description-ja">LiDARセンシングを用いたバスケットボール選手の3D追跡システム。試合中の選手とボールをリアルタイムで精密に3次元位置推定し、スポーツアナリティクスのための高密度空間データを取得する。コーチングや戦術分析への実用的活用を見据えたシステム構築を行った。</p>
-    <div class="card-tags"><span class="tag">LiDAR</span><span class="tag">Sports</span></div>
-    <div class="card-links"><a href="https://sites.google.com/keio.jp/keio-csg/projects/basket-lidar" class="link-badge link-project" target="_blank" rel="noopener" aria-label="Project Page"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><span class="badge-label">Project Page</span></a><a href="https://github.com/Keio-CSG/BasketLiDAR" class="link-badge link-code" target="_blank" rel="noopener" aria-label="Code"><span class="badge-icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span><span class="badge-label">Code</span></a></div>
-  </div>
-</article>
-<article class="project-card" data-tags="LiDAR, Security" data-venue="NDSS" data-highlight="true">
-  <div class="card-teaser">
-    <img src="assets/images/lidar-spoof-highspeed-teaser.svg" alt="On the Realism of LiDAR Spoofing Attacks against Autonomous Driving Vehicle at High Speed and Long Distance teaser" loading="lazy" />
-  </div>
-  <div class="card-body">
-    <div class="card-meta">
-      <span class="badge badge-venue badge-ndss">NDSS 2025</span>
-      <span class="badge badge-status badge-published">Published</span>
-    </div>
-    <h2 class="card-title">LiDAR Spoofing (High Speed)</h2>
-    <p class="card-authors">T. Sato, <strong>R. Suzuki</strong>, <strong>Y. Hayakawa</strong>, <strong>K. Ikeda</strong>, <strong>O. Sako</strong>, <strong>R. Nagata</strong>, Q. Chen, <strong>K. Yoshioka</strong></p>
-    <p class="card-description">Examines the practical feasibility of LiDAR spoofing attacks on autonomous driving vehicles
-at realistic high speeds and long distances.
-Reveals that spoofing remains effective under conditions previously assumed to be safe,
-challenging existing security assumptions.</p>
-    <p class="card-description-ja">高速走行・長距離条件下での自動運転車両に対するLiDARスプーフィング攻撃の現実的な有効性を検証した研究。これまで安全と想定されていた条件下でも攻撃が成立することを明らかにし、既存のセキュリティ前提を覆す実験的証拠を提示する。</p>
+    <h2 class="card-title">D-SLAMSpoof</h2>
+    <p class="card-authors"><strong>R. Nagata</strong>, K. Koide, <strong>K. Ikeda</strong>, <strong>O. Sako</strong>, <strong>K. Yoshioka</strong></p>
+    <p class="card-description">An environment-agnostic LiDAR spoofing attack that injects dynamically generated
+fake point clouds to manipulate SLAM-based localization systems.
+Unlike prior spoofing attacks that rely on environment-specific setup,
+D-SLAMSpoof adapts point cloud injection in real time, enabling effective attacks
+across diverse environments without prior scene knowledge.</p>
+    
     <div class="card-tags"><span class="tag">LiDAR</span><span class="tag">Security</span></div>
-    <div class="card-links"><a href="https://sites.google.com/keio.jp/keio-csg/projects/AttackonDrivingVehicle" class="link-badge link-project" target="_blank" rel="noopener" aria-label="Project Page"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><span class="badge-label">Project Page</span></a><a href="https://www.ndss-symposium.org/wp-content/uploads/2025-628-paper.pdf" class="link-badge link-paper" target="_blank" rel="noopener" aria-label="Paper"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8.5 15.5h-1v-4h1.3c.8 0 1.2.5 1.2 1.1 0 .7-.5 1.1-1.3 1.1H8.5v1.8zm0-2.6h.2c.3 0 .5-.1.5-.4 0-.3-.2-.4-.5-.4H8.5v.8zm3.5 2.6h-1v-4h1c1.1 0 1.8.7 1.8 2s-.7 2-1.8 2zm0-3.2h-.1v2.4h.1c.5 0 .9-.3.9-1.2 0-.9-.4-1.2-.9-1.2zm3.5 3.2h-1v-4h2.3v.8H15v.9h1.2v.7H15v1.6z"/></svg></span><span class="badge-label">Paper</span></a><a href="https://www.jst.go.jp/pr/announce/20250225-2/pdf/20250225-2.pdf" class="link-badge link-press" target="_blank" rel="noopener" aria-label="Press"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3h2v13a2 2 0 0 1-2 2H4zm14-2h2V9h-2v11zM4 4v16h12V4H4zm2 4h8v2H6V8zm0 4h8v2H6v-2zm0 4h5v2H6v-2z"/></svg></span><span class="badge-label">Press</span></a></div>
+    <div class="card-links"><a href="https://arxiv.org/abs/2603.11365" class="link-badge link-arxiv" target="_blank" rel="noopener" aria-label="arXiv"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><text x="1" y="17" font-family="serif" font-size="13" font-weight="bold" fill="white">ar</text></svg></span><span class="badge-label">arXiv</span></a></div>
   </div>
 </article>
 <article class="project-card" data-tags="LiDAR, Security" data-venue="ICRA" data-highlight="false">
@@ -217,6 +220,45 @@ Demonstrates practical V2I data transfer using commodity automotive LiDAR units.
     <p class="card-description-ja">既存の車載LiDARセンサを光通信チャネルとして転用し、インフラ・車両間通信（I2V）を実現する手法を提案。専用通信ハードウェアを不要とし、市販LiDARユニットのみで実用的なデータ転送を実証した。スマートインフラ連携の低コスト実装に向けた新たなアプローチを示す。</p>
     <div class="card-tags"><span class="tag">LiDAR</span><span class="tag">Communication</span></div>
     <div class="card-links"><a href="https://sites.google.com/keio.jp/keio-csg/projects" class="link-badge link-project" target="_blank" rel="noopener" aria-label="Project Page"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><span class="badge-label">Project Page</span></a></div>
+  </div>
+</article>
+<article class="project-card" data-tags="LiDAR, Security" data-venue="NDSS" data-highlight="true">
+  <div class="card-teaser">
+    <img src="assets/images/lidar-spoof-highspeed-teaser.svg" alt="On the Realism of LiDAR Spoofing Attacks against Autonomous Driving Vehicle at High Speed and Long Distance teaser" loading="lazy" />
+  </div>
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="badge badge-venue badge-ndss">NDSS 2025</span>
+      <span class="badge badge-status badge-published">Published</span>
+    </div>
+    <h2 class="card-title">LiDAR Spoofing (High Speed)</h2>
+    <p class="card-authors">T. Sato, <strong>R. Suzuki</strong>, <strong>Y. Hayakawa</strong>, <strong>K. Ikeda</strong>, <strong>O. Sako</strong>, <strong>R. Nagata</strong>, Q. Chen, <strong>K. Yoshioka</strong></p>
+    <p class="card-description">Examines the practical feasibility of LiDAR spoofing attacks on autonomous driving vehicles
+at realistic high speeds and long distances.
+Reveals that spoofing remains effective under conditions previously assumed to be safe,
+challenging existing security assumptions.</p>
+    <p class="card-description-ja">高速走行・長距離条件下での自動運転車両に対するLiDARスプーフィング攻撃の現実的な有効性を検証した研究。これまで安全と想定されていた条件下でも攻撃が成立することを明らかにし、既存のセキュリティ前提を覆す実験的証拠を提示する。</p>
+    <div class="card-tags"><span class="tag">LiDAR</span><span class="tag">Security</span></div>
+    <div class="card-links"><a href="https://sites.google.com/keio.jp/keio-csg/projects/AttackonDrivingVehicle" class="link-badge link-project" target="_blank" rel="noopener" aria-label="Project Page"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><span class="badge-label">Project Page</span></a><a href="https://www.ndss-symposium.org/wp-content/uploads/2025-628-paper.pdf" class="link-badge link-paper" target="_blank" rel="noopener" aria-label="Paper"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8.5 15.5h-1v-4h1.3c.8 0 1.2.5 1.2 1.1 0 .7-.5 1.1-1.3 1.1H8.5v1.8zm0-2.6h.2c.3 0 .5-.1.5-.4 0-.3-.2-.4-.5-.4H8.5v.8zm3.5 2.6h-1v-4h1c1.1 0 1.8.7 1.8 2s-.7 2-1.8 2zm0-3.2h-.1v2.4h.1c.5 0 .9-.3.9-1.2 0-.9-.4-1.2-.9-1.2zm3.5 3.2h-1v-4h2.3v.8H15v.9h1.2v.7H15v1.6z"/></svg></span><span class="badge-label">Paper</span></a><a href="https://www.jst.go.jp/pr/announce/20250225-2/pdf/20250225-2.pdf" class="link-badge link-press" target="_blank" rel="noopener" aria-label="Press"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3h2v13a2 2 0 0 1-2 2H4zm14-2h2V9h-2v11zM4 4v16h12V4H4zm2 4h8v2H6V8zm0 4h8v2H6v-2zm0 4h5v2H6v-2z"/></svg></span><span class="badge-label">Press</span></a></div>
+  </div>
+</article>
+<article class="project-card" data-tags="LiDAR, Sports" data-venue="MMSports" data-highlight="false">
+  <div class="card-teaser">
+    <img src="assets/images/basket-lidar-teaser.svg" alt="Basket LiDAR: 3D Basketball Player Tracking via LiDAR Sensing teaser" loading="lazy" />
+  </div>
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="badge badge-venue badge-mmsports">MMSports 2025</span>
+      <span class="badge badge-status badge-published">Published</span>
+    </div>
+    <h2 class="card-title">Basket LiDAR</h2>
+    <p class="card-authors"><strong>R. Hayashi</strong>, <strong>K. Torimi</strong>, <strong>R. Nagata</strong>, <strong>K. Ikeda</strong>, <strong>O. Sako</strong>, T. Nakamura, M. Tani, Y. Aoki, <strong>K. Yoshioka</strong></p>
+    <p class="card-description">3D basketball player tracking using LiDAR sensing for sports analytics.
+Enables precise real-time localization of players and ball during games,
+providing rich spatial data for performance analysis and coaching insights.</p>
+    <p class="card-description-ja">LiDARセンシングを用いたバスケットボール選手の3D追跡システム。試合中の選手とボールをリアルタイムで精密に3次元位置推定し、スポーツアナリティクスのための高密度空間データを取得する。コーチングや戦術分析への実用的活用を見据えたシステム構築を行った。</p>
+    <div class="card-tags"><span class="tag">LiDAR</span><span class="tag">Sports</span></div>
+    <div class="card-links"><a href="https://sites.google.com/keio.jp/keio-csg/projects/basket-lidar" class="link-badge link-project" target="_blank" rel="noopener" aria-label="Project Page"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><span class="badge-label">Project Page</span></a><a href="https://github.com/Keio-CSG/BasketLiDAR" class="link-badge link-code" target="_blank" rel="noopener" aria-label="Code"><span class="badge-icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span><span class="badge-label">Code</span></a></div>
   </div>
 </article>
 <article class="project-card" data-tags="LiDAR, Security" data-venue="NDSS" data-highlight="true">
@@ -306,6 +348,25 @@ Achieves 20.8 TOPS/W and 10× area efficiency improvement over prior digital CiR
     <div class="card-links"><a href="https://arxiv.org/abs/2509.08542" class="link-badge link-arxiv" target="_blank" rel="noopener" aria-label="arXiv"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><text x="1" y="17" font-family="serif" font-size="13" font-weight="bold" fill="white">ar</text></svg></span><span class="badge-label">arXiv</span></a><a href="https://github.com/Wenlun-Zhang/BitROM" class="link-badge link-code" target="_blank" rel="noopener" aria-label="Code"><span class="badge-icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span><span class="badge-label">Code</span></a></div>
   </div>
 </article>
+<article class="project-card" data-tags="CIM, Hardware, Edge AI" data-venue="ESSERC" data-highlight="false">
+  <div class="card-teaser">
+    <img src="assets/images/saliency-cim-teaser.svg" alt="A 4541 TOPS/W Saliency-Aware Analog Computing In-Memory Macro with Charge-Domain Saliency Detector teaser" loading="lazy" />
+  </div>
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="badge badge-venue badge-esserc">ESSERC 2025</span>
+      <span class="badge badge-status badge-published">Published</span>
+    </div>
+    <h2 class="card-title">Saliency-Aware CIM</h2>
+    <p class="card-authors"><strong>S. Ando</strong>, <strong>S. Miyagi</strong>, <strong>W. Zhang</strong>, <strong>Y.-C. Chen</strong>, <strong>K. Yoshioka</strong></p>
+    <p class="card-description">A 4541 TOPS/W analog compute-in-memory macro featuring a charge-domain saliency detector
+that dynamically skips computation on non-salient regions.
+Achieves state-of-the-art energy efficiency for vision inference at the edge.</p>
+    <p class="card-description-ja">顕著性検出器を内蔵した4541 TOPS/Wのアナログコンピュートインメモリマクロ。電荷ドメインで非顕著領域の演算を動的にスキップし、視覚推論における圧倒的なエネルギー効率を実現する。エッジAIデバイスの次世代設計に向けた画期的なアーキテクチャを提案する。</p>
+    <div class="card-tags"><span class="tag">CIM</span><span class="tag">Hardware</span><span class="tag">Edge AI</span></div>
+    <div class="card-links"></div>
+  </div>
+</article>
 <article class="project-card" data-tags="CIM, Hardware" data-venue="TVLSI" data-highlight="false">
   <div class="card-teaser">
     <img src="assets/images/asim-teaser.svg" alt="ASiM: Modeling and Analyzing Inference Accuracy of SRAM-Based Analog CiM Circuits teaser" loading="lazy" />
@@ -347,44 +408,24 @@ FPGA deployment achieves 7.89× speedup and 8.64× energy efficiency over float 
     <div class="card-links"><a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_AHCPTQ_Accurate_and_Hardware-Compatible_Post-Training_Quantization_for_Segment_Anything_Model_ICCV_2025_paper.pdf" class="link-badge link-paper" target="_blank" rel="noopener" aria-label="Paper"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8.5 15.5h-1v-4h1.3c.8 0 1.2.5 1.2 1.1 0 .7-.5 1.1-1.3 1.1H8.5v1.8zm0-2.6h.2c.3 0 .5-.1.5-.4 0-.3-.2-.4-.5-.4H8.5v.8zm3.5 2.6h-1v-4h1c1.1 0 1.8.7 1.8 2s-.7 2-1.8 2zm0-3.2h-.1v2.4h.1c.5 0 .9-.3.9-1.2 0-.9-.4-1.2-.9-1.2zm3.5 3.2h-1v-4h2.3v.8H15v.9h1.2v.7H15v1.6z"/></svg></span><span class="badge-label">Paper</span></a><a href="https://github.com/Keio-CSG/AHCPTQ" class="link-badge link-code" target="_blank" rel="noopener" aria-label="Code"><span class="badge-icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span><span class="badge-label">Code</span></a></div>
   </div>
 </article>
-<article class="project-card" data-tags="CIM, Hardware, Edge AI" data-venue="ESSERC" data-highlight="false">
+<article class="project-card" data-tags="CIM, Hardware" data-venue="ICCAD" data-highlight="true">
   <div class="card-teaser">
-    <img src="assets/images/saliency-cim-teaser.svg" alt="A 4541 TOPS/W Saliency-Aware Analog Computing In-Memory Macro with Charge-Domain Saliency Detector teaser" loading="lazy" />
+    <img src="assets/images/pacim-teaser.svg" alt="PACiM: A Sparsity-Centric Hybrid Compute-in-Memory Architecture via Probabilistic Approximation teaser" loading="lazy" />
   </div>
   <div class="card-body">
     <div class="card-meta">
-      <span class="badge badge-venue badge-esserc">ESSERC 2025</span>
+      <span class="badge badge-venue badge-iccad">ICCAD 2024</span>
       <span class="badge badge-status badge-published">Published</span>
     </div>
-    <h2 class="card-title">Saliency-Aware CIM</h2>
-    <p class="card-authors"><strong>S. Ando</strong>, <strong>S. Miyagi</strong>, <strong>W. Zhang</strong>, <strong>Y.-C. Chen</strong>, <strong>K. Yoshioka</strong></p>
-    <p class="card-description">A 4541 TOPS/W analog compute-in-memory macro featuring a charge-domain saliency detector
-that dynamically skips computation on non-salient regions.
-Achieves state-of-the-art energy efficiency for vision inference at the edge.</p>
-    <p class="card-description-ja">顕著性検出器を内蔵した4541 TOPS/Wのアナログコンピュートインメモリマクロ。電荷ドメインで非顕著領域の演算を動的にスキップし、視覚推論における圧倒的なエネルギー効率を実現する。エッジAIデバイスの次世代設計に向けた画期的なアーキテクチャを提案する。</p>
-    <div class="card-tags"><span class="tag">CIM</span><span class="tag">Hardware</span><span class="tag">Edge AI</span></div>
-    <div class="card-links"></div>
-  </div>
-</article>
-<article class="project-card" data-tags="CIM, Hardware, Edge AI" data-venue="ISSCC" data-highlight="true">
-  <div class="card-teaser">
-    <img src="assets/images/cap-reconfigured-cim-teaser.svg" alt="A 818-4094 TOPS/W Capacitor-Reconfigured CIM Macro for Unified Acceleration of CNNs and Transformers teaser" loading="lazy" />
-  </div>
-  <div class="card-body">
-    <div class="card-meta">
-      <span class="badge badge-venue badge-isscc">ISSCC 2024</span>
-      <span class="badge badge-status badge-published">Published</span>
-    </div>
-    <h2 class="card-title">CR-CIM</h2>
-    <p class="card-authors"><strong>K. Yoshioka</strong></p>
-    <p class="card-description">A capacitor-reconfigured compute-in-memory macro achieving 818–4094 TOPS/W
-for unified acceleration of both CNNs and Transformers.
-Dynamic capacitor reconfiguration adapts analog compute precision to each layer&#39;s bit-width requirements,
-enabling the first analog CIM to handle Transformer inference while delivering 10× energy efficiency
-over prior work in CNN mode at 4094 TOPS/W.</p>
-    <p class="card-description-ja">CNNとTransformerの両モデルを統一的に加速する818〜4094 TOPS/Wのキャパシタ再構成型コンピュートインメモリマクロ。層ごとのビット幅要件に合わせてキャパシタ構成を動的に切り替えることで、幅広いモデルアーキテクチャに対応したオンチップ推論を実現する。CNNモードでは従来比10倍のエネルギー効率4094 TOPS/Wを達成。</p>
-    <div class="card-tags"><span class="tag">CIM</span><span class="tag">Hardware</span><span class="tag">Edge AI</span></div>
-    <div class="card-links"><a href="https://ieeexplore.ieee.org/document/10689660" class="link-badge link-paper" target="_blank" rel="noopener" aria-label="Paper"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8.5 15.5h-1v-4h1.3c.8 0 1.2.5 1.2 1.1 0 .7-.5 1.1-1.3 1.1H8.5v1.8zm0-2.6h.2c.3 0 .5-.1.5-.4 0-.3-.2-.4-.5-.4H8.5v.8zm3.5 2.6h-1v-4h1c1.1 0 1.8.7 1.8 2s-.7 2-1.8 2zm0-3.2h-.1v2.4h.1c.5 0 .9-.3.9-1.2 0-.9-.4-1.2-.9-1.2zm3.5 3.2h-1v-4h2.3v.8H15v.9h1.2v.7H15v1.6z"/></svg></span><span class="badge-label">Paper</span></a><a href="https://www.jst.go.jp/pr/announce/20240219/" class="link-badge link-press" target="_blank" rel="noopener" aria-label="Press"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3h2v13a2 2 0 0 1-2 2H4zm14-2h2V9h-2v11zM4 4v16h12V4H4zm2 4h8v2H6V8zm0 4h8v2H6v-2zm0 4h5v2H6v-2z"/></svg></span><span class="badge-label">Press</span></a></div>
+    <h2 class="card-title">PACiM</h2>
+    <p class="card-authors"><strong>W. Zhang</strong>, <strong>S. Ando</strong>, <strong>Y.C. Chen</strong>, <strong>S. Miyagi</strong>, S. Takamaeda-Yamazaki, <strong>K. Yoshioka</strong></p>
+    <p class="card-description">A sparsity-centric hybrid compute-in-memory architecture using probabilistic approximation (PAC)
+to convert vector operations into scalar computations, halving memory transfers by eliminating LSB transmission.
+Achieves 14.63 TOPS/W in 65 nm CMOS with 4× lower approximation error than prior methods,
+maintaining ResNet-18 ImageNet accuracy.</p>
+    <p class="card-description-ja">確率的近似（PAC）によりベクトル演算をスカラー演算に変換し、スパース性を最大限活用するハイブリッドCIMアーキテクチャ。最小有効ビットの省略でメモリ転送量を半減し、従来比4倍の近似誤差低減を実現。65nm CMOSで14.63 TOPS/Wを達成し、ResNet-18でImageNet精度を維持する。</p>
+    <div class="card-tags"><span class="tag">CIM</span><span class="tag">Hardware</span></div>
+    <div class="card-links"><a href="https://dl.acm.org/doi/10.1145/3676536.3676704" class="link-badge link-paper" target="_blank" rel="noopener" aria-label="Paper"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8.5 15.5h-1v-4h1.3c.8 0 1.2.5 1.2 1.1 0 .7-.5 1.1-1.3 1.1H8.5v1.8zm0-2.6h.2c.3 0 .5-.1.5-.4 0-.3-.2-.4-.5-.4H8.5v.8zm3.5 2.6h-1v-4h1c1.1 0 1.8.7 1.8 2s-.7 2-1.8 2zm0-3.2h-.1v2.4h.1c.5 0 .9-.3.9-1.2 0-.9-.4-1.2-.9-1.2zm3.5 3.2h-1v-4h2.3v.8H15v.9h1.2v.7H15v1.6z"/></svg></span><span class="badge-label">Paper</span></a><a href="https://github.com/Keio-CSG/PACiM" class="link-badge link-code" target="_blank" rel="noopener" aria-label="Code"><span class="badge-icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span><span class="badge-label">Code</span></a></div>
   </div>
 </article>
 <article class="project-card" data-tags="CIM, Hardware" data-venue="ASP-DAC" data-highlight="false">
@@ -407,24 +448,25 @@ inference accuracy through adaptive bit-width selection.</p>
     <div class="card-links"><a href="https://arxiv.org/abs/2308.15040" class="link-badge link-arxiv" target="_blank" rel="noopener" aria-label="arXiv"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><text x="1" y="17" font-family="serif" font-size="13" font-weight="bold" fill="white">ar</text></svg></span><span class="badge-label">arXiv</span></a></div>
   </div>
 </article>
-<article class="project-card" data-tags="CIM, Hardware" data-venue="ICCAD" data-highlight="true">
+<article class="project-card" data-tags="CIM, Hardware, Edge AI" data-venue="ISSCC" data-highlight="true">
   <div class="card-teaser">
-    <img src="assets/images/pacim-teaser.svg" alt="PACiM: A Sparsity-Centric Hybrid Compute-in-Memory Architecture via Probabilistic Approximation teaser" loading="lazy" />
+    <img src="assets/images/cap-reconfigured-cim-teaser.svg" alt="A 818-4094 TOPS/W Capacitor-Reconfigured CIM Macro for Unified Acceleration of CNNs and Transformers teaser" loading="lazy" />
   </div>
   <div class="card-body">
     <div class="card-meta">
-      <span class="badge badge-venue badge-iccad">ICCAD 2024</span>
+      <span class="badge badge-venue badge-isscc">ISSCC 2024</span>
       <span class="badge badge-status badge-published">Published</span>
     </div>
-    <h2 class="card-title">PACiM</h2>
-    <p class="card-authors"><strong>W. Zhang</strong>, <strong>S. Ando</strong>, <strong>Y.C. Chen</strong>, <strong>S. Miyagi</strong>, S. Takamaeda-Yamazaki, <strong>K. Yoshioka</strong></p>
-    <p class="card-description">A sparsity-centric hybrid compute-in-memory architecture using probabilistic approximation (PAC)
-to convert vector operations into scalar computations, halving memory transfers by eliminating LSB transmission.
-Achieves 14.63 TOPS/W in 65 nm CMOS with 4× lower approximation error than prior methods,
-maintaining ResNet-18 ImageNet accuracy.</p>
-    <p class="card-description-ja">確率的近似（PAC）によりベクトル演算をスカラー演算に変換し、スパース性を最大限活用するハイブリッドCIMアーキテクチャ。最小有効ビットの省略でメモリ転送量を半減し、従来比4倍の近似誤差低減を実現。65nm CMOSで14.63 TOPS/Wを達成し、ResNet-18でImageNet精度を維持する。</p>
-    <div class="card-tags"><span class="tag">CIM</span><span class="tag">Hardware</span></div>
-    <div class="card-links"><a href="https://dl.acm.org/doi/10.1145/3676536.3676704" class="link-badge link-paper" target="_blank" rel="noopener" aria-label="Paper"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8.5 15.5h-1v-4h1.3c.8 0 1.2.5 1.2 1.1 0 .7-.5 1.1-1.3 1.1H8.5v1.8zm0-2.6h.2c.3 0 .5-.1.5-.4 0-.3-.2-.4-.5-.4H8.5v.8zm3.5 2.6h-1v-4h1c1.1 0 1.8.7 1.8 2s-.7 2-1.8 2zm0-3.2h-.1v2.4h.1c.5 0 .9-.3.9-1.2 0-.9-.4-1.2-.9-1.2zm3.5 3.2h-1v-4h2.3v.8H15v.9h1.2v.7H15v1.6z"/></svg></span><span class="badge-label">Paper</span></a><a href="https://github.com/Keio-CSG/PACiM" class="link-badge link-code" target="_blank" rel="noopener" aria-label="Code"><span class="badge-icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span><span class="badge-label">Code</span></a></div>
+    <h2 class="card-title">CR-CIM</h2>
+    <p class="card-authors"><strong>K. Yoshioka</strong></p>
+    <p class="card-description">A capacitor-reconfigured compute-in-memory macro achieving 818–4094 TOPS/W
+for unified acceleration of both CNNs and Transformers.
+Dynamic capacitor reconfiguration adapts analog compute precision to each layer&#39;s bit-width requirements,
+enabling the first analog CIM to handle Transformer inference while delivering 10× energy efficiency
+over prior work in CNN mode at 4094 TOPS/W.</p>
+    <p class="card-description-ja">CNNとTransformerの両モデルを統一的に加速する818〜4094 TOPS/Wのキャパシタ再構成型コンピュートインメモリマクロ。層ごとのビット幅要件に合わせてキャパシタ構成を動的に切り替えることで、幅広いモデルアーキテクチャに対応したオンチップ推論を実現する。CNNモードでは従来比10倍のエネルギー効率4094 TOPS/Wを達成。</p>
+    <div class="card-tags"><span class="tag">CIM</span><span class="tag">Hardware</span><span class="tag">Edge AI</span></div>
+    <div class="card-links"><a href="https://ieeexplore.ieee.org/document/10689660" class="link-badge link-paper" target="_blank" rel="noopener" aria-label="Paper"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM8.5 15.5h-1v-4h1.3c.8 0 1.2.5 1.2 1.1 0 .7-.5 1.1-1.3 1.1H8.5v1.8zm0-2.6h.2c.3 0 .5-.1.5-.4 0-.3-.2-.4-.5-.4H8.5v.8zm3.5 2.6h-1v-4h1c1.1 0 1.8.7 1.8 2s-.7 2-1.8 2zm0-3.2h-.1v2.4h.1c.5 0 .9-.3.9-1.2 0-.9-.4-1.2-.9-1.2zm3.5 3.2h-1v-4h2.3v.8H15v.9h1.2v.7H15v1.6z"/></svg></span><span class="badge-label">Paper</span></a><a href="https://www.jst.go.jp/pr/announce/20240219/" class="link-badge link-press" target="_blank" rel="noopener" aria-label="Press"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3h2v13a2 2 0 0 1-2 2H4zm14-2h2V9h-2v11zM4 4v16h12V4H4zm2 4h8v2H6V8zm0 4h8v2H6v-2zm0 4h5v2H6v-2z"/></svg></span><span class="badge-label">Press</span></a></div>
   </div>
 </article>
   </div>
