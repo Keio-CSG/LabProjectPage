@@ -316,3 +316,27 @@ Use placeholder `assets/images/*-teaser.png` paths. For teaser images, generate 
 - To change layout or style: edit `style.css` or `template.html`, rebuild.
 - teaser images should be 1200×675px (16:9) for best display.
 - The filter JS must be inline in `template.html` (no separate JS file needed for now).
+
+---
+
+## Local Build Workaround (Windows + Google Drive)
+
+**Problem:** This repo lives under `G:\マイドライブ\...` (Google Drive). Google Drive sync corrupts `node_modules` by zeroing out files (e.g. `gray-matter/package.json` becomes 0 bytes), making `node build.js` fail with `ERR_INVALID_PACKAGE_CONFIG`.
+
+**Workaround:** Build in a temp directory outside Google Drive, then copy `index.html` back.
+
+```powershell
+$tmp = "C:\Users\kyosh\AppData\Local\Temp\labproject-build"
+New-Item -ItemType Directory -Force $tmp | Out-Null
+Copy-Item "G:\マイドライブ\010_Codes\LabProject\build.js"      "$tmp\build.js"
+Copy-Item "G:\マイドライブ\010_Codes\LabProject\package.json"   "$tmp\package.json"
+Copy-Item "G:\マイドライブ\010_Codes\LabProject\template.html"  "$tmp\template.html"
+Copy-Item -Recurse -Force "G:\マイドライブ\010_Codes\LabProject\projects" "$tmp\projects"
+Copy-Item -Recurse -Force "G:\マイドライブ\010_Codes\LabProject\assets"   "$tmp\assets"
+Set-Location $tmp
+npm install
+node build.js
+Copy-Item "$tmp\index.html" "G:\マイドライブ\010_Codes\LabProject\index.html" -Force
+```
+
+Then commit and push `index.html` so GitHub Pages picks it up.
